@@ -18,3 +18,7 @@ i.mdi-navigation-menu {
 nav ul a {
     color: #333;
 }
+ul#overflow {
+    top: 15px!important;
+    right: 20px!important;
+}
