@@ -14,3 +14,7 @@ nav a {
 i.mdi-navigation-menu {
     padding: 10px 0 0 30px;
 }
+
+nav ul a {
+    color: #333;
+}
