@@ -8,13 +8,13 @@
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href='css/fullcalendar.css' rel='stylesheet' />
   <link href='css/fullcalendar.print.css' rel='stylesheet' media='print' />
   <script src='js/moment.min.js'></script>
   <script src='js/fullcalendar.min.js'></script>
   <script src='js/gcal.js'></script>
   <script src='js/jquery.min.js'></script>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <script>
 
 	$(document).ready(function() {
@@ -24,7 +24,7 @@
 			// THIS KEY WON'T WORK IN PRODUCTION!!!
 			// To make your own Google API key, follow the directions here:
 			// http://fullcalendar.io/docs/google_calendar/
-			googleCalendarApiKey: 'AIzaSyDcnW6WejpTOCffshGDDb4neIrXVUA1EAE',
+			googleCalendarApiKey: 'AIzaSyDereJ50sioVk1EKNXt7m-dtNhEYweC_5A',
 		
 			// US Holidays
 			events: 'usa__en@holiday.calendar.google.com',
@@ -68,20 +68,18 @@
         <li><a href="#!">Feedback</a></li>
       </ul>
   </nav>
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
 	<div id='loading'>loading...</div>
 
 	<div id='calendar'></div>
-  <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-
-
     </div>
   </div>
 
   <!--  Scripts-->
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
-
 
   </body>
 </html>
