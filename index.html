@@ -9,6 +9,40 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href='css/fullcalendar.css' rel='stylesheet' />
+  <link href='css/fullcalendar.print.css' rel='stylesheet' media='print' />
+  <script src='js/moment.min.js'></script>
+  <script src='js/fullcalendar.min.js'></script>
+  <script src='js/gcal.js'></script>
+  <script>
+
+	$(document).ready(function() {
+	
+		$('#calendar').fullCalendar({
+
+			// THIS KEY WON'T WORK IN PRODUCTION!!!
+			// To make your own Google API key, follow the directions here:
+			// http://fullcalendar.io/docs/google_calendar/
+			googleCalendarApiKey: 'AIzaSyDcnW6WejpTOCffshGDDb4neIrXVUA1EAE',
+		
+			// US Holidays
+			events: 'usa__en@holiday.calendar.google.com',
+			
+			eventClick: function(event) {
+				// opens events in a popup window
+				window.open(event.url, 'gcalevent', 'width=700,height=600');
+				return false;
+			},
+			
+			loading: function(bool) {
+				$('#loading').toggle(bool);
+			}
+			
+		});
+		
+	});
+
+</script>
 </head>
 
 
@@ -36,13 +70,9 @@
 
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
-      <h3 class="header center green-text text-darken-3">Southern Virginia University</h3>
-      <br>
-      <h1 class="header center green-text text-darken-3">Calendar</h1>
-      <div class="row center">
-        <a href="https://github.com/svucsc/svucsc.github.io" id="download-button" class="btn btn-large waves-effect waves-light green darken-3">By CSC 313 - 2015</a>
-      </div>
-      <br><br>
+	<div id='loading'>loading...</div>
+
+	<div id='calendar'></div>
 
     </div>
   </div>
