@@ -24,11 +24,15 @@
 
 
 			googleCalendarApiKey: 'AIzaSyDereJ50sioVk1EKNXt7m-dtNhEYweC_5A',
-		
-			events: {
-				googleCalendarId: 'usa__en@holiday.calendar.google.com',
-				googleCalendarId: 'svu.edu_nf5v7viog32c563doboaljtf4o@group.calendar.google.com'
-			}
+			 eventSources: [
+			            {
+			                googleCalendarId: 'usa__en@holiday.calendar.google.com'
+			            },
+			            {
+			                googleCalendarId: 'svu.edu_nf5v7viog32c563doboaljtf4o@group.calendar.google.com',
+			                className: 'nice-event'
+			            }
+			        ]		
 			
 			eventClick: function(event) {
 				// opens events in a popup window
