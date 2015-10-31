@@ -32,7 +32,9 @@ i.mdi-navigation-menu {
 }
 
 nav ul a {
-    color: #333;
+    color: #fff;
+    text-shadow: 1px 0px 6px #333;
+    height: 60px;
 }
 ul#overflow {
     top: 15px!important;
