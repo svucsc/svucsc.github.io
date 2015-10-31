@@ -1,11 +1,21 @@
 /* Custom Stylesheet */
 
 /* Table of Contents
-1 - Materialize Overrides
-2 - FullCalendar Overrides
+1 - General Classes
+2 - Materialize Overrides
+3 - FullCalendar Overrides
 */
 
-/* 1 - Materialize Overrides */
+/* General Classes */
+h2 {
+    color: #fff;
+    font-size: 28px;
+    padding-top: 37px;
+    text-shadow: 0px 1px 5px #333;
+}
+
+
+/* 2 - Materialize Overrides */
 nav a {
     color: #333;
 }
@@ -16,7 +26,9 @@ nav {
 }
 
 i.mdi-navigation-menu {
-    padding: 10px 0 0 30px;
+    padding: 34px 0 0 30px;
+    font-size: 32px;
+    color: #fff;
 }
 
 nav ul a {
@@ -45,7 +57,7 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
 div#index-banner {
     margin-top: -140px;
 }
-/* 2 - FullCalendar Customization */
+/* 3 - FullCalendar Customization */
 #loading {
 	display: none;
 	position: absolute;
