@@ -11,7 +11,8 @@ nav a {
 }
 
 nav {
-    box-shadow: none; 
+    box-shadow: none;
+    background-color: transparent;
 }
 
 i.mdi-navigation-menu {
