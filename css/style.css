@@ -36,6 +36,9 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
     height: 140px;
     line-height: 64px; 
 }
+.fc-toolbar {
+    margin-top: -140px;	
+}
 
 /* 2 - FullCalendar Customization */
 #loading {
