@@ -30,10 +30,9 @@ i.mdi-navigation-menu {
     font-size: 32px;
     color: #fff;
 }
-
-nav ul a {
-    color: #fff;
+i.material-icons {
     text-shadow: 1px 0px 6px #333;
+    color: #fff;
     height: 60px;
 }
 ul#overflow {
