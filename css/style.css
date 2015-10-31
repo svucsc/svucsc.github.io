@@ -30,6 +30,7 @@ nav .nav-wrapper {
     height: 150px;
     background-size: 100%;
     background-position-y: 1825px;
+    z-index: -1;
 }
 /* set height for image  */
 nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
@@ -38,6 +39,7 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
 }
 .fc-toolbar {
     margin-top: -140px;	
+    margin: 0 100px;
 }
 
 /* 2 - FullCalendar Customization */
