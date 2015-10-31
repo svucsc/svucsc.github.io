@@ -39,29 +39,29 @@ ul#overflow {
     right: 20px!important;
 }
 /* Adjust 140px header  */
-nav .nav-wrapper {
+nav {
     background-image: url("http://svu.edu/wp-content/uploads/2015/10/learnmore-carousel.jpg");
-    height: 140px;
     background-size: 100%;
     background-position-y: 1825px;
-    z-index: -1;
 }
 nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
     height: 140px;
     line-height: 64px; 
 }
-.fc-toolbar {
-    margin-top: -140px;	
-    margin: 0 100px;
-}
 div#index-banner {
     margin-top: -140px;
 }
 /* 3 - FullCalendar Customization */
+.fc-toolbar {
+    margin-top: -140px;	
+    margin: 0 100px;
+}
 #loading {
 	display: none;
 	position: absolute;
 	top: 10px;
 	right: 10px;
 }
-
+.fc-right {
+    padding-top: 34px;
+}
