@@ -1,8 +1,11 @@
 /* Custom Stylesheet */
-/**
- * Override of Materialize Stylesheet
- */
 
+/* Table of Contents
+1 - Materialize Overrides
+2 - FullCalendar Overrides
+*/
+
+/* 1 - Materialize Overrides */
 nav a {
     color: #333;
 }
@@ -22,9 +25,23 @@ ul#overflow {
     top: 15px!important;
     right: 20px!important;
 }
+nav .nav-wrapper {
+    background-image: url("http://svu.edu/wp-content/uploads/2015/10/learnmore-carousel.jpg");
+    height: 150px;
+    background-size: 100%;
+    background-position-y: 1825px;
+}
+/* set height for image  */
+nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+    height: 140px;
+    line-height: 64px; 
+}
+
+/* 2 - FullCalendar Customization */
 #loading {
 	display: none;
 	position: absolute;
 	top: 10px;
 	right: 10px;
 }
+
