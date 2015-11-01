@@ -46,10 +46,12 @@
 			
 			$( "#week" ).click(function() {
                     $('#calendar').fullCalendar( 'changeView', 'basicWeek' );
+                    $('.button-collapse').sideNav('hide');
                     
                 });
                 $( "#month" ).click(function() {
                     $('#calendar').fullCalendar( 'changeView', 'month' );
+                    $('.button-collapse').sideNav('hide');
                 });
                 $( "#ref" ).click(function() {
                     location.reload();
