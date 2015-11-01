@@ -44,7 +44,10 @@
 				        }
 				    }
 		});
-			
+                    $( "#day" ).click(function() {
+                    $('#calendar').fullCalendar( 'changeView', 'agendaDay' );
+                    $('.button-collapse').sideNav('hide');
+                });
 		    $( "#week" ).click(function() {
                     $('#calendar').fullCalendar( 'changeView', 'agendaWeek' );
                     $('.button-collapse').sideNav('hide');
@@ -68,7 +71,7 @@
   <nav>
     <!-- Sidebar Menu -->
     <ul id="slide-out" class="side-nav">
-      <li><a href="#!" id="threeDay">3 Day</a></li>
+      <li><a href="#!" id="Day">Day</a></li>
       <li><a href="#!" id="week">Week</a></li>
       <li><a href="#!" id ="month">Month</a></li>
       <li class="no-padding">
