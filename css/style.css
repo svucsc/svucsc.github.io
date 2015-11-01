@@ -39,7 +39,7 @@ ul#overflow {
     top: 15px!important;
     right: 20px!important;
 }
-/* Adjust 140px header  */
+	/* Adjust 140px header  */
 nav {
     background-image: url("http://svu.edu/wp-content/uploads/2015/10/learnmore-carousel.jpg");
     background-size: 100%;
@@ -52,6 +52,10 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
 div#index-banner {
     margin-top: -140px;
 }
+	/* Give header image a box shadow */
+.nav-wrapper {
+    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.29);
+}
 /* 3 - FullCalendar Customization */
 .fc-toolbar {
     margin-top: -140px;	
@@ -63,8 +67,22 @@ div#index-banner {
 	top: 10px;
 	right: 10px;
 }
+	/* Control buttons padding */
 .fc-right {
     padding-top: 34px;
+}
+
+	/* Align day numbers left */
+.fc-ltr .fc-basic-view .fc-day-number {
+    text-align: left;
+}
+	/* Do not display event times */
+span.fc-time {
+    display: none;
+}
+	/* Remove borders */
+td.fc-widget-header {
+    border: none;
 }
 th.fc-day-header {
     border: none;
@@ -72,24 +90,7 @@ th.fc-day-header {
 .fc-content-skeleton thead {
     border: none;
 }
-.fc-ltr .fc-basic-view .fc-day-number {
-    text-align: left;
-}
-span.fc-time {
-    display: none;
-}
-.fc-event {
-    font-size: .9em;
-}
-a.fc-day-grid-event.fc-h-event.fc-event.fc-start.fc-end.svucal {
-    padding: 0 4px 0 9px;
-}
-td.fc-event-container {
-    padding: 0 3px;
-}
-td.fc-widget-header {
-    border: none;
-}
+	/* Day of the Week name styles */
 th.fc-day-header.fc-widget-header {
     font-size: 1.3em;
     font-weight: 300;
@@ -97,11 +98,22 @@ th.fc-day-header.fc-widget-header {
 .fc-view.fc-month-view.fc-basic-view {
     margin-top: 7px;
 }
+	/* Event Styles */
 .fc-event {
     font-weight: 300;
+    font-size: .9em;
 }
-.nav-wrapper {
-    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.29);
+td.fc-event-container {
+    padding: 0 3px;
 }
+a.fc-day-grid-event.fc-h-event.fc-event.fc-start.fc-end {
+    padding: 0 4px 0 9px;
+}
+	/* Change calendar day border colors */
 .fc-unthemed th, .fc-unthemed td, .fc-unthemed thead, .fc-unthemed tbody, .fc-unthemed .fc-divider, .fc-unthemed .fc-row, .fc-unthemed .fc-popover {
-  
+      border-color: #eee;
+}
+	/* Prevent scrollbars within the calendar */
+.fc-day-grid-container.fc-scroller {
+    height: auto!important;
+}
