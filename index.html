@@ -23,12 +23,7 @@
 		
 	
 		$('#calendar').fullCalendar({
-			views: {
-        		   ThreeDay: {
-        			 type: 'basic',
-        			 duration: { days: 3 },
-        			
-        }
+		
 			aspectRatio: 1.8,
 		
 			googleCalendarApiKey: 'AIzaSyDereJ50sioVk1EKNXt7m-dtNhEYweC_5A',
@@ -48,6 +43,13 @@
 				        }
 				    }
 		});
+			$('#calendar').fullCalendar({
+			views: {
+        		   ThreeDay: {
+        			 type: 'basic',
+        			 duration: { days: 3 },
+        			
+        }
 			$( "#week" ).click(function() {
                     $('#calendar').fullCalendar( 'changeView', 'basicWeek' );
                 });
@@ -57,6 +59,7 @@
                  $( "#threeDay" ).click(function() {
                     $('#calendar').fullCalendar( 'changeView', 'ThreeDay' );
                 });
+			});
 	});
 
 </script>
