@@ -62,10 +62,13 @@ div#index-banner {
     margin: 0 100px;
 }
 #loading {
-	display: none;
-	position: absolute;
-	top: 10px;
-	right: 10px;
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.fc-unthemed .fc-today {
+    background: #eee;
 }
 	/* Control buttons padding */
 .fc-right {
@@ -115,7 +118,7 @@ td.fc-day-number {
 }
 	/* Change calendar day border colors */
 .fc-unthemed th, .fc-unthemed td, .fc-unthemed thead, .fc-unthemed tbody, .fc-unthemed .fc-divider, .fc-unthemed .fc-row, .fc-unthemed .fc-popover {
-      border-color: #eee;
+    border-color: #eee;
 }
 	/* Prevent scrollbars within the calendar */
 .fc-day-grid-container.fc-scroller {
