@@ -25,7 +25,7 @@
 	
 		$('#calendar').fullCalendar({
 			aspectRatio: 1.8,
-		
+			minTime: "06:00:00",
 			googleCalendarApiKey: 'AIzaSyDereJ50sioVk1EKNXt7m-dtNhEYweC_5A',
 			 eventSources: [
 			            {
@@ -53,10 +53,6 @@
                     $('#calendar').fullCalendar( 'changeView', 'month' );
                     $('.button-collapse').sideNav('hide');
                 });
-		$('#calendar').fullCalendar({
-		minTime: "06:00:00",
-		maxTime: "21:00:00",
-		});
                 $( "#ref" ).click(function() {
                     location.reload();
                 });
