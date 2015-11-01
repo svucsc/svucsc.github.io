@@ -19,12 +19,6 @@ h2 {
 nav a {
     color: #333;
 }
-
-nav {
-    box-shadow: none;
-    background-color: transparent;
-}
-
 i.mdi-navigation-menu {
     padding: 34px 0 0 30px;
     font-size: 32px;
@@ -41,9 +35,11 @@ ul#overflow {
 }
 	/* Adjust 140px header  */
 nav {
-    background-image: url("http://svu.edu/wp-content/uploads/2015/10/learnmore-carousel.jpg");
-    background-size: 100%;
-    background-position-y: 1825px;
+    background-image: url("http://svucsc.github.io/img/banner.jpg");
+    background-size: auto 112%;
+    background-position: center;
+    box-shadow: none;
+    background-color: transparent;
 }
 nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
     height: 140px;
