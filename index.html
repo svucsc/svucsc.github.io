@@ -19,6 +19,10 @@
   <script>
 
 	$(document).ready(function() {
+		
+		$( "#week" ).click(function() {
+                    .fullCalendar( 'changeView', 'basicWeek' );
+                });
 	
 		$('#calendar').fullCalendar({
 			aspectRatio: 1.8,
