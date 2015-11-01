@@ -134,7 +134,7 @@ td.fc-day-number {
     border-color: #eee;
 }
 	/* Prevent scrollbars within the calendar */
-.fc-day-grid-container.fc-scroller {
+.fc-day-grid-container.fc-scroller, .fc-time-grid-container fc-scroller {
     height: auto!important;
 }
 	/* Nav buttons style */
