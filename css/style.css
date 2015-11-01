@@ -28,6 +28,12 @@ i.material-icons {
     color: #fff;
     height: 60px;
 }
+a.dropdown-button {
+    height: 62px;
+}
+a.dropdown-button > i {
+    height: 10px;
+}
 ul#overflow {
     top: 15px!important;
     right: 20px!important;
