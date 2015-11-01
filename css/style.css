@@ -52,6 +52,16 @@ div#index-banner {
 .nav-wrapper {
     box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.29);
 }
+	/* Switch Color */
+.switch label .lever {
+    background-color:#CACACA;
+}
+.switch label input[type=checkbox]:checked + .lever:after {
+    background-color:#007a3b;
+}
+ .switch label input[type=checkbox]:checked + .lever {
+    background-color:#007a3b;
+}
 
 /* 3 - FullCalendar Customization */
 .fc-toolbar {
