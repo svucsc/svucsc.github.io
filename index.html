@@ -23,6 +23,12 @@
 		
 	
 		$('#calendar').fullCalendar({
+			views: {
+        		   ThreeDay: {
+        			 type: 'basic',
+        			 duration: { days: 3 },
+        			
+        }
 			aspectRatio: 1.8,
 		
 			googleCalendarApiKey: 'AIzaSyDereJ50sioVk1EKNXt7m-dtNhEYweC_5A',
@@ -45,6 +51,12 @@
 			$( "#week" ).click(function() {
                     $('#calendar').fullCalendar( 'changeView', 'basicWeek' );
                 });
+                $( "#month" ).click(function() {
+                    $('#calendar').fullCalendar( 'changeView', 'Month' );
+                });
+                 $( "#threeDay" ).click(function() {
+                    $('#calendar').fullCalendar( 'changeView', 'ThreeDay' );
+                });
 	});
 
 </script>
@@ -55,7 +67,7 @@
   <nav>
     <!-- Sidebar Menu -->
     <ul id="slide-out" class="side-nav">
-      <li><a href="#!">3 Day</a></li>
+      <li><a href="#!" id="threeDay">3 Day</a></li>
       <li><a href="#!" id="week">Week</a></li>
       <li><a href="#!" id ="month">Month</a></li>
     </ul>
