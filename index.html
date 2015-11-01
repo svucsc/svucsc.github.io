@@ -46,9 +46,11 @@
 			
 			$( "#week" ).click(function() {
                     $('#calendar').fullCalendar( 'changeView', 'basicWeek' );
+                    removeMenu();
                 });
                 $( "#month" ).click(function() {
                     $('#calendar').fullCalendar( 'changeView', 'month' );
+                    removeMenu();
                 });
                 
 			
