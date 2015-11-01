@@ -66,3 +66,9 @@ div#index-banner {
 .fc-right {
     padding-top: 34px;
 }
+th.fc-day-header {
+    border: none;
+}
+.fc-content-skeleton thead {
+    border: none;
+}
