@@ -90,3 +90,18 @@ td.fc-event-container {
 td.fc-widget-header {
     border: none;
 }
+th.fc-day-header.fc-widget-header.fc-sun {
+    font-size: 1.3em;
+    font-weight: 300;
+}
+.fc-view.fc-month-view.fc-basic-view {
+    margin-top: 7px;
+}
+.fc-event {
+    font-weight: 300;
+}
+.nav-wrapper {
+    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.29);
+}
+.fc-unthemed th, .fc-unthemed td, .fc-unthemed thead, .fc-unthemed tbody, .fc-unthemed .fc-divider, .fc-unthemed .fc-row, .fc-unthemed .fc-popover {
+  
