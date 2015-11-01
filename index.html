@@ -23,7 +23,6 @@
 		
 	
 		$('#calendar').fullCalendar({
-		
 			aspectRatio: 1.8,
 		
 			googleCalendarApiKey: 'AIzaSyDereJ50sioVk1EKNXt7m-dtNhEYweC_5A',
@@ -38,6 +37,10 @@
 			        ],
 			            eventLimit: true, // for all non-agenda views
 				    views: {
+				    	3Day: {
+				    	    type: 'agenda',
+                                            duration: { days: 3 },
+				    	}
 				        month: {
 				            eventLimit: 4 // adjust to 5 only for month view
 				        }
@@ -50,6 +53,10 @@
                 $( "#month" ).click(function() {
                     $('#calendar').fullCalendar( 'changeView', 'month' );
                 });
+                $( "#threeDay" ).click(function() {
+                    $('#calendar').fullCalendar( 'changeView', '3Day' );
+                });
+                
 			
 	});
 
