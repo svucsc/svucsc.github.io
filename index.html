@@ -53,9 +53,9 @@
                     $('#calendar').fullCalendar( 'changeView', 'month' );
                     $('.button-collapse').sideNav('hide');
                 });
-                $('#calendar').fullCalendar({
-		minTime: 7,
-		maxTime: 21,
+		$('#calendar').fullCalendar({
+		minTime: "06:00:00",
+		maxTime: "21:00:00",
 		});
                 $( "#ref" ).click(function() {
                     location.reload();
