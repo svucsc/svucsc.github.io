@@ -90,7 +90,7 @@ td.fc-event-container {
 td.fc-widget-header {
     border: none;
 }
-th.fc-day-header.fc-widget-header.fc-sun {
+th.fc-day-header.fc-widget-header {
     font-size: 1.3em;
     font-weight: 300;
 }
