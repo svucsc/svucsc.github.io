@@ -6700,10 +6700,10 @@ form p:last-child {
   height: 0; }
 
 .switch label input[type=checkbox]:checked + .lever {
-  background-color: #84c7c1; }
+  background-color: #006531; }
 
 .switch label input[type=checkbox]:checked + .lever:after {
-  background-color: #26a69a; }
+  background-color:  #007a3b; }
 
 .switch label .lever {
   content: "";
@@ -6711,7 +6711,7 @@ form p:last-child {
   position: relative;
   width: 40px;
   height: 15px;
-  background-color: #006531;
+  background-color: #F1F1F1;
   border-radius: 15px;
   margin-right: 10px;
   transition: background 0.3s ease;
