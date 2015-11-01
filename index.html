@@ -43,23 +43,14 @@
 				        }
 				    }
 		});
-			$('#calendar').fullCalendar({
-			views: {
-        		   ThreeDay: {
-        			 type: 'basic',
-        			 duration: { days: 3 },
-        			
-        }
+			
 			$( "#week" ).click(function() {
                     $('#calendar').fullCalendar( 'changeView', 'basicWeek' );
                 });
                 $( "#month" ).click(function() {
-                    $('#calendar').fullCalendar( 'changeView', 'Month' );
+                    $('#calendar').fullCalendar( 'changeView', 'month' );
                 });
-                 $( "#threeDay" ).click(function() {
-                    $('#calendar').fullCalendar( 'changeView', 'ThreeDay' );
-                });
-			});
+			
 	});
 
 </script>
