@@ -53,6 +53,10 @@
                     $('#calendar').fullCalendar( 'changeView', 'month' );
                     $('.button-collapse').sideNav('hide');
                 });
+                $('#calendar').fullCalendar({
+		minTime: 7,
+		maxTime: 21,
+		});
                 $( "#ref" ).click(function() {
                     location.reload();
                 });
