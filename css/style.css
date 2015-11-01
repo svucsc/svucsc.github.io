@@ -122,3 +122,14 @@ td.fc-day-number {
 .fc-day-grid-container.fc-scroller {
     height: auto!important;
 }
+	/* Nav buttons style */
+span.fc-icon {
+    height: initial;
+    color: #333;
+}
+button.fc-today-button {
+    color: #333;
+}
+.fc .fc-button-group > * {
+    margin: 0 0 0 9px;
+}
