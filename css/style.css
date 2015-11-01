@@ -72,3 +72,6 @@ th.fc-day-header {
 .fc-content-skeleton thead {
     border: none;
 }
+.fc-ltr .fc-basic-view .fc-day-number {
+    text-align: left;
+}
