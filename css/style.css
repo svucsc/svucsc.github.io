@@ -1,19 +1,19 @@
 /* Custom Stylesheet */
 
-/* Table of Contents
+/* 
+Table of Contents
 1 - General Classes
 2 - Materialize Overrides
 3 - FullCalendar Overrides
 */
 
-/* General Classes */
+/* 1 - General Classes */
 h2 {
     color: #fff;
     font-size: 28px;
     padding-top: 37px;
     text-shadow: 0px 1px 5px #333;
 }
-
 
 /* 2 - Materialize Overrides */
 nav a {
@@ -52,6 +52,7 @@ div#index-banner {
 .nav-wrapper {
     box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.29);
 }
+
 /* 3 - FullCalendar Customization */
 .fc-toolbar {
     margin-top: -140px;	
@@ -63,6 +64,7 @@ div#index-banner {
     top: 10px;
     right: 10px;
 }
+	/* Today Highlight Color */
 .fc-unthemed .fc-today {
     background: #eee;
 }
