@@ -37,10 +37,7 @@
 			        ],
 			            eventLimit: true, // for all non-agenda views
 				    views: {
-				    	ThreeDay: {
-				    	    type: 'agenda',
-                                            duration: { days: 3 },
-				    	}
+				 
 				        month: {
 				            eventLimit: 4 // adjust to 5 only for month view
 				        }
@@ -52,9 +49,6 @@
                 });
                 $( "#month" ).click(function() {
                     $('#calendar').fullCalendar( 'changeView', 'month' );
-                });
-                $( "#threeDay" ).click(function() {
-                    $('#calendar').fullCalendar( 'changeView', 'ThreeDay' );
                 });
                 
 			
