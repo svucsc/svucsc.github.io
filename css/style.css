@@ -75,3 +75,18 @@ th.fc-day-header {
 .fc-ltr .fc-basic-view .fc-day-number {
     text-align: left;
 }
+span.fc-time {
+    display: none;
+}
+.fc-event {
+    font-size: .9em;
+}
+a.fc-day-grid-event.fc-h-event.fc-event.fc-start.fc-end.svucal {
+    padding: 0 4px 0 9px;
+}
+td.fc-event-container {
+    padding: 0 3px;
+}
+td.fc-widget-header {
+    border: none;
+}
