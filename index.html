@@ -56,9 +56,6 @@
                     $('#calendar').fullCalendar( 'changeView', 'month' );
                     $('.button-collapse').sideNav('hide');
                 });
-                $( "#ref" ).click(function() {
-                    location.reload();
-                });
 
 
 	});
@@ -127,9 +124,9 @@
     </div>
       <ul id="overflow" class="dropdown-content">
         <li><a href="javascript:window.print()">Print</a></li>
-        <li><a href="#!">Refresh</a></li>
+        <li><a href="javascript:location.reload(true)">Refresh</a></li>
         <li class="divider"></li>
-        <li><a href="#!">Feedback</a></li>
+        <li><a href="http://svu.edu/communications/web-feedback/">Feedback</a></li>
       </ul>
   </nav>
 
