@@ -40,7 +40,13 @@
 	        }
 
 	    });
-            $('#cal_1').click(function(){
+            $('#calSvu').click(function(){
+                if (this.checked) {
+                    $('#calendar').fullCalendar('addEventSource', 'svu.edu_nf5v7viog32c563doboaljtf4o@group.calendar.google.com')
+                } else {
+                     $('#calendar').fullCalendar('removeEventSource', 'svu.edu_nf5v7viog32c563doboaljtf4o@group.calendar.google.com')}
+}) 
+             $('#holiday').click(function(){
                 if (this.checked) {
                     $('#calendar').fullCalendar('addEventSource', 'svu.edu_nf5v7viog32c563doboaljtf4o@group.calendar.google.com')
                 } else {
@@ -86,15 +92,15 @@
               <li><a href="#!">
               	<div class="switch">
     			<label>
-      			<input type="checkbox" id="cal_1"checked>
+      			<input type="checkbox" id="calSvu"checked>
       			<span style="margin-left:0px"class="lever"></span>
       			<strong style="font-size:15px">SVU Calendar</strong>
     			</label>
   		</div></a></li>
               <li><a href="#!">
-              	<div class="switch" id="holiday">
+              	<div class="switch">
     			<label>
-      			<input type="checkbox" checked>
+      			<input type="checkbox" id="holiday"checked>
 			      <span style="margin-left:0px"class="lever"></span>
       			<strong style="font-size:15px">Holidays</strong>
     			</label>
