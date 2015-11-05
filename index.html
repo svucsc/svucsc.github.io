@@ -40,7 +40,14 @@
 	        }
 
 	    });
-
+            $('#cal_1').click(function(){
+                if (this.checked) {
+                    $('#calendar').fullCalendar('addEventSource', .svucal)
+                    $('#calendar').fullCalendar('refetchEvents');
+                } else {
+                     $('#calendar').fullCalendar('removeEventSource', .svucal)
+                     $('#calendar').fullCalendar('refetchEvents')}
+}) 
 	    $("#day").click(function() {
 	        $('#calendar').fullCalendar('changeView', 'basicDay');
 	        $('.button-collapse').sideNav('hide');
@@ -79,9 +86,9 @@
           <div class="collapsible-body">
             <ul>
               <li><a href="#!">
-              	<div class="switch" id="svucal">
+              	<div class="switch">
     			<label>
-      			<input type="checkbox" checked>
+      			<input type="checkbox" id="cal_1"checked>
       			<span style="margin-left:0px"class="lever"></span>
       			<strong style="font-size:15px">SVU Calendar</strong>
     			</label>
