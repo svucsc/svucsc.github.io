@@ -42,10 +42,10 @@
 	    });
             $('#cal_1').click(function(){
                 if (this.checked) {
-                    $('#calendar').fullCalendar('addEventSource', .svucal)
+                    $('#calendar').fullCalendar('addEventSource', '.svucal')
                     $('#calendar').fullCalendar('refetchEvents');
                 } else {
-                     $('#calendar').fullCalendar('removeEventSource', .svucal)
+                     $('#calendar').fullCalendar('removeEventSource', '.svucal')
                      $('#calendar').fullCalendar('refetchEvents')}
 }) 
 	    $("#day").click(function() {
