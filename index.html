@@ -58,6 +58,15 @@
 	    } else {
 	        //do nothing
 	    }
+	   <!----- $('#checkbox').click(function(){
+    if (this.checked) {
+        
+    $('#calendar').fullCalendar('addEventSource', #svucal)
+    $('#calendar').fullCalendar('refetchEvents');
+    } else {
+    $('#calendar').fullCalendar('removeEventSource', #svucal)
+    $('#calendar').fullCalendar('refetchEvents')}
+}) ------>
 	});
 
 </script>
@@ -78,19 +87,19 @@
           <div class="collapsible-body">
             <ul>
               <li><a href="#!">
-              	<div class="switch">
+              	<div class="switch" id="svucal">
     			<label>
-      			<input type="checkbox">
+      			<input type="checkbox" checked>
       			<span style="margin-left:0px"class="lever"></span>
-      			<strong style="font-size:15px">Calendar 1</strong>
+      			<strong style="font-size:15px">SVU Calendar</strong>
     			</label>
   		</div></a></li>
               <li><a href="#!">
-              	<div class="switch">
+              	<div class="switch" id="holiday">
     			<label>
       			<input type="checkbox">
 			      <span style="margin-left:0px"class="lever"></span>
-      			<strong style="font-size:15px">Calendar 2</strong>
+      			<strong style="font-size:15px">Holidays</strong>
     			</label>
   		</div></a></li>
               <li><a href="#!">
