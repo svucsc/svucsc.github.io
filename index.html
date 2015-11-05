@@ -21,43 +21,43 @@
 
 	$(document).ready(function() {
 
+	    $('#calendar').fullCalendar({
+	        aspectRatio: 1.8,
+	        minTime: "06:00:00",
+	        googleCalendarApiKey: 'AIzaSyDereJ50sioVk1EKNXt7m-dtNhEYweC_5A',
+	        eventSources: [{
+	            googleCalendarId: 'usa__en@holiday.calendar.google.com'
+	        }, {
+	            googleCalendarId: 'svu.edu_nf5v7viog32c563doboaljtf4o@group.calendar.google.com',
+	            className: 'svucal'
+	        }],
+	        eventLimit: true, // for all non-agenda views
+	        views: {
 
+	            month: {
+	                eventLimit: 4 // adjust to 5 only for month view
+	            }
+	        }
 
-		$('#calendar').fullCalendar({
-			aspectRatio: 1.8,
-			minTime: "06:00:00",
-			googleCalendarApiKey: 'AIzaSyDereJ50sioVk1EKNXt7m-dtNhEYweC_5A',
-			 eventSources: [
-			            {
-			                googleCalendarId: 'usa__en@holiday.calendar.google.com'
-			            },
-			            {
-			                googleCalendarId: 'svu.edu_nf5v7viog32c563doboaljtf4o@group.calendar.google.com',
-			                className: 'svucal'
-			            }
-			        ],
-			            eventLimit: true, // for all non-agenda views
-				    views: {
+	    });
 
-				        month: {
-				            eventLimit: 4 // adjust to 5 only for month view
-				        }
-				    }
-		});
-                    $( "#day" ).click(function() {
-                    $('#calendar').fullCalendar( 'changeView', 'basicDay' );
-                    $('.button-collapse').sideNav('hide');
-                });
-		    $( "#week" ).click(function() {
-                    $('#calendar').fullCalendar( 'changeView', 'agendaWeek' );
-                    $('.button-collapse').sideNav('hide');
-                });
-                    $( "#month" ).click(function() {
-                    $('#calendar').fullCalendar( 'changeView', 'month' );
-                    $('.button-collapse').sideNav('hide');
-                });
-
-
+	    $("#day").click(function() {
+	        $('#calendar').fullCalendar('changeView', 'basicDay');
+	        $('.button-collapse').sideNav('hide');
+	    });
+	    $("#week").click(function() {
+	        $('#calendar').fullCalendar('changeView', 'agendaWeek');
+	        $('.button-collapse').sideNav('hide');
+	    });
+	    $("#month").click(function() {
+	        $('#calendar').fullCalendar('changeView', 'month');
+	        $('.button-collapse').sideNav('hide');
+	    });
+	    if ($(window).width() < 650) {
+	        $('#calendar').fullCalendar('changeView', 'basicDay');
+	    } else {
+	        //do nothing
+	    }
 	});
 
 </script>
