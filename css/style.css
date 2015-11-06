@@ -40,9 +40,10 @@ ul#overflow {
 }
 	/* Subscribe Buttons  */
 a.subscribe {
-    padding: 6px;
+    padding: 8px;
     display: inline;
-    vertical-align: middle;
+    vertical-align: middle; 
+    vertical-align: -webkit-baseline-middle;
 }
 
 .subscribe .material-icons {
