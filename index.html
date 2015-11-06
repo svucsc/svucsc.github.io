@@ -1,155 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Southern Virginia University Calendar</title>
-
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href='css/fullcalendar.css' rel='stylesheet' />
-  <link href='css/fullcalendar.print.css' rel='stylesheet' media='print' />
-  <link href='css/print.css' rel='stylesheet' media='print' />
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-
-  <script src='js/jquery.min.js'></script>
-  <script src='js/moment.min.js'></script>
-  <script src='js/fullcalendar.min.js'></script>
-  <script src='js/gcal.js'></script>
-
-  <script>
-
-	$(document).ready(function() {
-
-	    $('#calendar').fullCalendar({
-	        aspectRatio: 1.8,
-	        minTime: "06:00:00",
-	        googleCalendarApiKey: 'AIzaSyDereJ50sioVk1EKNXt7m-dtNhEYweC_5A',
-	        eventSources: [{
-	            googleCalendarId: 'usa__en@holiday.calendar.google.com'
-	        }, {
-	            googleCalendarId: 'svu.edu_nf5v7viog32c563doboaljtf4o@group.calendar.google.com',
-	            className: 'svucal'
-	        }],
-	        eventLimit: true, // for all non-agenda views
-	        views: {
-
-	            month: {
-	                eventLimit: 4 // adjust to 5 only for month view
-	            }
-	        }
-
-	    });
-            $('#calSvu').click(function(){
-                if (this.checked) {
-                    $('#calendar').fullCalendar('addEventSource', 'svu.edu_nf5v7viog32c563doboaljtf4o@group.calendar.google.com')
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+        <title>Southern Virginia University Calendar</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href='css/fullcalendar.css' rel='stylesheet' />
+        <link href='css/fullcalendar.print.css' rel='stylesheet' media='print' />
+        <link href='css/print.css' rel='stylesheet' media='print' />
+        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <script src='js/jquery.min.js'></script>
+        <script src='js/moment.min.js'></script>
+        <script src='js/fullcalendar.min.js'></script>
+        <script src='js/gcal.js'></script>
+        <script>
+            $(document).ready(function() {
+                $('#calendar').fullCalendar({
+                    aspectRatio: 1.8,
+                    minTime: "06:00:00",
+                    googleCalendarApiKey: 'AIzaSyDereJ50sioVk1EKNXt7m-dtNhEYweC_5A',
+                    eventSources: [{
+                        googleCalendarId: 'usa__en@holiday.calendar.google.com'
+                    }, {
+                        googleCalendarId: 'svu.edu_nf5v7viog32c563doboaljtf4o@group.calendar.google.com',
+                        className: 'svucal'
+                    }],
+                    eventLimit: true, // for all non-agenda views
+                    views: {
+            
+                        month: {
+                            eventLimit: 4 // adjust to 5 only for month view
+                        }
+                    }
+                });
+                       $('#svucal').click(function(){
+                           if (this.checked) {
+                               $('#calendar').fullCalendar('addEventSource', 'svu.edu_nf5v7viog32c563doboaljtf4o@group.calendar.google.com')
+                           } else {
+                                $('#calendar').fullCalendar('removeEventSource', 'svu.edu_nf5v7viog32c563doboaljtf4o@group.calendar.google.com')}
+            })
+                        $('#holiday').click(function(){
+                           if (this.checked) {
+                               $('#calendar').fullCalendar('addEventSource', 'usa__en@holiday.calendar.google.com')
+                           } else {
+                                $('#calendar').fullCalendar('removeEventSource', 'usa__en@holiday.calendar.google.com')}
+            })
+                $("#day").click(function() {
+                    $('#calendar').fullCalendar('changeView', 'basicDay');
+                    $('.button-collapse').sideNav('hide');
+                });
+                $("#week").click(function() {
+                    $('#calendar').fullCalendar('changeView', 'agendaWeek');
+                    $('.button-collapse').sideNav('hide');
+                });
+                $("#month").click(function() {
+                    $('#calendar').fullCalendar('changeView', 'month');
+                    $('.button-collapse').sideNav('hide');
+                });
+                if ($(window).width() < 650) {
+                    $('#calendar').fullCalendar('changeView', 'basicDay');
                 } else {
-                     $('#calendar').fullCalendar('removeEventSource', 'svu.edu_nf5v7viog32c563doboaljtf4o@group.calendar.google.com')}
-}) 
-             $('#holiday').click(function(){
-                if (this.checked) {
-                    $('#calendar').fullCalendar('addEventSource', 'usa__en@holiday.calendar.google.com')
-                } else {
-                     $('#calendar').fullCalendar('removeEventSource', 'usa__en@holiday.calendar.google.com')}
-}) 
-	    $("#day").click(function() {
-	        $('#calendar').fullCalendar('changeView', 'basicDay');
-	        $('.button-collapse').sideNav('hide');
-	    });
-	    $("#week").click(function() {
-	        $('#calendar').fullCalendar('changeView', 'agendaWeek');
-	        $('.button-collapse').sideNav('hide');
-	    });
-	    $("#month").click(function() {
-	        $('#calendar').fullCalendar('changeView', 'month');
-	        $('.button-collapse').sideNav('hide');
-	    });
-	    if ($(window).width() < 650) {
-	        $('#calendar').fullCalendar('changeView', 'basicDay');
-	    } else {
-	        //do nothing
-	    }
-	    
-	});
-
-</script>
-</head>
-
-
-<body>
-  <nav>
-    <!-- Sidebar Menu -->
-    <ul id="slide-out" class="side-nav">
-      <li><a href="#!" id="day">Day</a></li>
-      <li><a href="#!" id="week">Week</a></li>
-      <li><a href="#!" id ="month">Month</a></li>
-      <li class="no-padding">
-      <ul class="collapsible collapsible-accordion">
-        <li>
-          <a class="collapsible-header">Calendars<i class="mdi-navigation-arrow-drop-down"></i></a>
-          <div class="collapsible-body">
-            <ul>
-              <li><a href="#!">
-              	<div class="switch">
-    			<label>
-      			<input type="checkbox" id="calSvu"checked>
-      			<span style="margin-left:0px"class="lever"></span>
-      			<strong style="font-size:15px">SVU Calendar</strong>
-    			</label>
-  		</div></a></li>
-              <li><a href="#!">
-              	<div class="switch">
-    			<label>
-      			<input type="checkbox" id="holiday"checked>
-			      <span style="margin-left:0px"class="lever"></span>
-      			<strong style="font-size:15px">Holidays</strong>
-    			</label>
-  		</div></a></li>
-              <li><a href="#!">
-              	<div class="switch">
-    			<label>
-      			<input type="checkbox" checked>
-      			<span style="margin-left:0px"class="lever"></span>
-      			<strong style="font-size:15px">Calendar 3</strong>
-    			</label>
-  		</div></a></li>
-              <li><a href="#!">
-              	<div class="switch">
-    			<label>
-      			<input type="checkbox" checked>
-      			<span style="margin-left:0px"class="lever"></span>
-      			<strong style="font-size:15px">Calendar 4</strong>
-    			</label>
-  		</div></a></li>
+                    //do nothing
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <nav>
+            <!-- Sidebar Menu -->
+            <ul id="slide-out" class="side-nav">
+                <li><a href="#!" id="day">Day</a></li>
+                <li><a href="#!" id="week">Week</a></li>
+                <li><a href="#!" id ="month">Month</a></li>
+                <li class="divider"></li>
+                <li class="no-padding">
+                <li>
+                    <label>
+                    <input type="checkbox" class="filled-in" id="svucal"  checked="checked">
+                    <label for="svucal">Academic Calendar</label>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                    <input type="checkbox" class="filled-in" id="activities" checked="checked">
+                    <label for="activities">Activities</label>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                    <input type="checkbox" class="filled-in" id="arts" checked="checked">
+                    <label for="arts">Arts</label>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                    <input type="checkbox" class="filled-in" id="athletics" checked="checked">
+                    <label for="athletics">Athletics</label>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                    <input type="checkbox" class="filled-in" id="religious" checked="checked">
+                    <label for="religious">Religious</label>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                    <input type="checkbox" class="filled-in" id="holiday" checked="checked">
+                    <label for="holiday">Holiday</label>
+                    </label>
+                </li>
             </ul>
-          </div>
-        </li>
-      </ul>
-    </li>
-    </ul>
-    <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
-     <!-- OverFlow Menu -->
-    <div class="nav-wrapper">
-    <ul class="right hide-on-med-and-down">
-      <li><a class="dropdown-button" href="#!" data-activates="overflow"><i class="material-icons">more_vert</i></a></li>
-    </ul>
-    </div>
-      <ul id="overflow" class="dropdown-content">
-        <li><a href="javascript:window.print()">Print</a></li>
-        <li><a href="javascript:location.reload(true)">Refresh</a></li>
-        <li class="divider"></li>
-        <li><a href="http://svu.edu/communications/web-feedback/">Feedback</a></li>
-      </ul>
-  </nav>
-
-  <div class="section no-pad-bot" id="index-banner">
-	<div id='loading'>loading...</div>
-	<div id='calendar'></div>
-  </div>
-
-  <!--  Scripts-->
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
-
-  </body>
+            <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
+            <!-- OverFlow Menu -->
+            <div class="nav-wrapper">
+                <ul class="right hide-on-med-and-down">
+                    <li><a class="dropdown-button" href="#!" data-activates="overflow"><i class="material-icons">more_vert</i></a></li>
+                </ul>
+            </div>
+            <ul id="overflow" class="dropdown-content">
+                <li><a href="javascript:window.print()">Print</a></li>
+                <li><a href="javascript:location.reload(true)">Refresh</a></li>
+                <li class="divider"></li>
+                <li><a href="http://svu.edu/communications/web-feedback/">Feedback</a></li>
+            </ul>
+        </nav>
+        <div class="section no-pad-bot" id="index-banner">
+            <div id='loading'>loading...</div>
+            <div id='calendar'></div>
+        </div>
+        <!--  Scripts-->
+        <script src="js/materialize.js"></script>
+        <script src="js/init.js"></script>
+    </body>
 </html>
