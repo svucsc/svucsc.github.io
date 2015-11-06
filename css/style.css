@@ -38,6 +38,18 @@ ul#overflow {
     top: 15px!important;
     right: 20px!important;
 }
+	/* Subscribe Buttons  */
+a.subscribe {
+    padding: 6px;
+    display: inline;
+    vertical-align: middle;
+}
+
+.subscribe .material-icons {
+    text-shadow: 0 0 0;
+    color: #9e9e9e;
+    height: 0px;
+}
 	/* Adjust 140px header  */
 nav {
     background-image: url("http://svucsc.github.io/img/banner.jpg");
