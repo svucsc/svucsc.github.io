@@ -2,8 +2,9 @@
 /*
 Table of Contents
 1 - General Classes
-2 - Materialize Overrides
-3 - FullCalendar Overrides
+2 - Calendar Group Classes
+3 - Materialize Overrides
+4 - FullCalendar Overrides
 */
 
 /* 1 - General Classes */
@@ -13,8 +14,53 @@ h2 {
     padding-top: 37px;
     text-shadow: 0px 1px 5px #333;
 }
-
-/* 2 - Materialize Overrides */
+/* 2 - Calendar Group Classes */
+.academics-cal {
+  background: #2da26c;
+  border: 1px solid #2da26c;
+}
+#academics.filled-in:checked+label:after {
+    background-color: #2da26c;
+}
+.activities-cal {
+  background: #029AE4;
+  border: 1px solid #029AE4;
+}
+#activities.filled-in:checked+label:after {
+    background-color: #029AE4;
+}
+.arts-cal {
+  background: #7E57C2;
+  border: 1px solid #7E57C2;
+}
+#arts.filled-in:checked+label:after {
+    background-color: #7E57C2;
+}
+.athletics-cal {
+  background: #EF5350;
+  border: 1px solid #EF5350;
+}
+#athletics.filled-in:checked+label:after {
+    background-color: #EF5350;
+}
+.religious-cal {
+  background: #FFB74D;
+  border: 1px solid #FFB74D;
+}
+#religious.filled-in:checked+label:after {
+    background-color: #FFB74D;
+}
+.holiday-cal {
+  background: #607D8B;
+  border: 1px solid #607D8B;
+}
+#holiday.filled-in:checked+label:after {
+    background-color: #607D8B;
+}
+[type="checkbox"].filled-in:checked+label:after {
+  border: none;
+}
+/* 3 - Materialize Overrides */
 nav a {
     color: #333;
 }
@@ -42,7 +88,7 @@ ul#overflow {
 a.subscribe {
     padding: 8px;
     display: inline;
-    vertical-align: middle; 
+    vertical-align: middle;
     vertical-align: -webkit-baseline-middle;
 }
 
@@ -52,7 +98,7 @@ a.subscribe {
     height: 0px;
 }
 .calendar-list li {
-    margin-left: 18px;
+    padding: 0 0 0 32px;
 }
 	/* Adjust 140px header  */
 nav {
@@ -69,10 +115,6 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
 div#index-banner {
     margin-top: -140px;
 }
-	/* Give header image a box shadow */
-.nav-wrapper {
-    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.29);
-}
 	/* Switch Color */
 .switch label .lever {
     background-color:#CACACA;
@@ -84,7 +126,7 @@ div#index-banner {
     background-color:#007a3b;
 }
 
-/* 3 - FullCalendar Customization */
+/* 4 - FullCalendar Customization */
 .fc-toolbar {
     margin-top: -140px;
     margin: 0 100px;
