@@ -43,8 +43,13 @@
                     views: {
 
                         month: {
-                            eventLimit: 4 // adjust to 5 only for month view
-                        }
+                            eventLimit: 5 
+                        }, 
+                         agendaThreeDay: {   
+                           type: 'agenda',   
+                         duration: { days: 3 },   
+                         buttonText: '3 day'  
+                          } 
                     }
                 });
                        $('#academics').click(function(){
@@ -87,6 +92,10 @@
                     $('#calendar').fullCalendar('changeView', 'basicDay');
                     $('.button-collapse').sideNav('hide');
                 });
+                  $("#threeday").click(function() { 
+                   $('#calendar').fullCalendar('changeView', 'agendaThreeDay'); 
+                   $('.button-collapse').sideNav('hide'); 
+               }); 
                 $("#week").click(function() {
                     $('#calendar').fullCalendar('changeView', 'agendaWeek');
                     $('.button-collapse').sideNav('hide');
@@ -108,6 +117,7 @@
             <!-- Sidebar Menu -->
             <ul id="slide-out" class="side-nav">
                 <li><a href="#!" id="day">Day</a></li>
+                <li><a href="#!" id="threeday">Three Day</a></li>
                 <li><a href="#!" id="week">Week</a></li>
                 <li><a href="#!" id ="month">Month</a></li>
                 <li class="divider"></li>
