@@ -21,10 +21,23 @@
                     minTime: "06:00:00",
                     googleCalendarApiKey: 'AIzaSyDereJ50sioVk1EKNXt7m-dtNhEYweC_5A',
                     eventSources: [{
-                        googleCalendarId: 'usa__en@holiday.calendar.google.com'
+                        googleCalendarId: 'usa__en@holiday.calendar.google.com',
+                        className: 'holiday-cal'
                     }, {
                         googleCalendarId: 'svu.edu_nf5v7viog32c563doboaljtf4o@group.calendar.google.com',
-                        className: 'svucal'
+                        className: 'academics-cal'
+                    }, {
+                        googleCalendarId: 'svu.edu_cpmvje154c4g2gkvk545i6pmqk@group.calendar.google.com',
+                        className: 'activities-cal'
+                    }, {
+                        googleCalendarId: 'svu.edu_9cv92psfm81gqmcdr8ok95odes@group.calendar.google.com',
+                        className: 'arts-cal'
+                    }, {
+                        googleCalendarId: 'svu.edu_fe3j597hjc9bf2t0fb7nni6sf8@group.calendar.google.com',
+                        className: 'athletics-cal'
+                    }, {
+                        googleCalendarId: 'svu.edu_lg0oft04slbt53v0knekmtn60o@group.calendar.google.com',
+                        className: 'religious-cal'
                     }],
                     eventLimit: true, // for all non-agenda views
                     views: {
@@ -34,11 +47,35 @@
                         }
                     }
                 });
-                       $('#svucal').click(function(){
+                       $('#academics').click(function(){
                            if (this.checked) {
                                $('#calendar').fullCalendar('addEventSource', 'svu.edu_nf5v7viog32c563doboaljtf4o@group.calendar.google.com')
                            } else {
                                 $('#calendar').fullCalendar('removeEventSource', 'svu.edu_nf5v7viog32c563doboaljtf4o@group.calendar.google.com')}
+            })
+                        $('#activities').click(function(){
+                           if (this.checked) {
+                               $('#calendar').fullCalendar('addEventSource', 'svu.edu_cpmvje154c4g2gkvk545i6pmqk@group.calendar.google.com')
+                           } else {
+                                $('#calendar').fullCalendar('removeEventSource', 'svu.edu_cpmvje154c4g2gkvk545i6pmqk@group.calendar.google.com')}
+            })
+                        $('#arts').click(function(){
+                           if (this.checked) {
+                               $('#calendar').fullCalendar('addEventSource', 'svu.edu_9cv92psfm81gqmcdr8ok95odes@group.calendar.google.com')
+                           } else {
+                                $('#calendar').fullCalendar('removeEventSource', 'svu.edu_9cv92psfm81gqmcdr8ok95odes@group.calendar.google.com')}
+            })
+                        $('#athletics').click(function(){
+                           if (this.checked) {
+                               $('#calendar').fullCalendar('addEventSource', 'svu.edu_fe3j597hjc9bf2t0fb7nni6sf8@group.calendar.google.com')
+                           } else {
+                                $('#calendar').fullCalendar('removeEventSource', 'svu.edu_fe3j597hjc9bf2t0fb7nni6sf8@group.calendar.google.com')}
+            })
+                        $('#religious').click(function(){
+                           if (this.checked) {
+                               $('#calendar').fullCalendar('addEventSource', 'svu.edu_lg0oft04slbt53v0knekmtn60o@group.calendar.google.com')
+                           } else {
+                                $('#calendar').fullCalendar('removeEventSource', 'svu.edu_lg0oft04slbt53v0knekmtn60o@group.calendar.google.com')}
             })
                         $('#holiday').click(function(){
                            if (this.checked) {
@@ -77,8 +114,8 @@
                 <div class="calendar-list">
                 <li>
                     <label>
-                    <input type="checkbox" class="filled-in" id="svucal"  checked="checked">
-                    <label for="svucal">Academics</label>
+                    <input type="checkbox" class="filled-in" id="academics"  checked="checked">
+                    <label for="academics">Academics</label>
                     <a href = "http://www.google.com/calendar/render?cid=https://www.google.com/calendar/ical/svu.edu_nf5v7viog32c563doboaljtf4o%40group.calendar.google.com/public/basic.ics" class="subscribe"><i class="material-icons">event</i></a>
                     </label>
                 </li>
