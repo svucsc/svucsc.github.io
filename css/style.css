@@ -137,6 +137,10 @@ div#index-banner {
     top: 10px;
     right: 10px;
 }
+	/* fix scrolling default */
+.fc-time-grid-container.fc-scroller {
+    height: auto!important;
+}
 	/* Today Highlight Color */
 .fc-unthemed .fc-today {
     background: #eee;
