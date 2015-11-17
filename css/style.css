@@ -8,6 +8,9 @@ Table of Contents
 */
 
 /* 1 - General Classes */
+body {
+  overflow-x: hidden;
+}
 h2 {
     color: #fff;
     font-size: 28px;
@@ -137,10 +140,7 @@ div#index-banner {
     top: 10px;
     right: 10px;
 }
-	/* fix scrolling default */
-.fc-time-grid-container.fc-scroller {
-    height: auto!important;
-}
+
 	/* Today Highlight Color */
 .fc-unthemed .fc-today {
     background: rgba(238,238,238,.6);
@@ -154,7 +154,7 @@ div#index-banner {
 .fc-ltr .fc-basic-view .fc-day-number {
     text-align: left;
 }
-	/* Do not display event times */
+	/* Do not display event times in month*/
 .fc-month-view .fc-time {
     display: none;
 }
@@ -198,13 +198,7 @@ td.fc-day-number {
 .fc-unthemed th, .fc-unthemed td, .fc-unthemed thead, .fc-unthemed tbody, .fc-unthemed .fc-divider, .fc-unthemed .fc-row, .fc-unthemed .fc-popover {
     border-color: #eee;
 }
-	/* Prevent scrollbars within the calendar */
-.fc-day-grid-container.fc-scroller, .fc-time-grid-container fc-scroller {
-    height: auto!important;
-}
-.fc-time-grid-container {
-    overflow-y: visible!important;
-}
+
 	/* Nav buttons style */
 span.fc-icon {
     height: initial;
@@ -215,4 +209,13 @@ button.fc-today-button {
 }
 .fc .fc-button-group > * {
     margin: 0 0 0 9px;
+}
+
+	/* Set month weeks min height */
+.fc-basic-view .fc-body .fc-row {
+    min-height: 10em;
+}
+	/* This is messy - it prevents the clipping on day view */
+.fc-row.fc-week.fc-widget-content.fc-rigid {
+    min-height: 300px;
 }
