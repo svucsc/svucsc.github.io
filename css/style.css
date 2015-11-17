@@ -143,7 +143,7 @@ div#index-banner {
 }
 	/* Today Highlight Color */
 .fc-unthemed .fc-today {
-    background: #eee;
+    background: rgba(238,238,238,.6);
 }
 	/* Control buttons padding */
 .fc-right {
@@ -203,7 +203,7 @@ td.fc-day-number {
     height: auto!important;
 }
 .fc-time-grid-container {
-    overflow-x: visible!important;
+    overflow-y: visible!important;
 }
 	/* Nav buttons style */
 span.fc-icon {
