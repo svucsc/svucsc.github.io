@@ -52,6 +52,19 @@
                          duration: { days: 3 },
                          buttonText: '3 day'
                           }
+                    },
+                    dayClick: function(date, allDay, jsEvent, view) {
+
+                        if (allDay) {
+                            // Clicked on the entire day
+
+                            //if ($(jsEvent.target).is('.fc-day-number')) {
+                                // Clicked on the day number
+
+                                $('#calendar').fullCalendar('changeView', 'basicDay'/* or 'basicDay' */);
+                                $('#calendar').fullCalendar('gotoDate', date);
+                            //}
+                            }
                     }
                 });
                        $('#academics').click(function(){
