@@ -202,6 +202,9 @@ td.fc-day-number {
 .fc-day-grid-container.fc-scroller, .fc-time-grid-container fc-scroller {
     height: auto!important;
 }
+.fc-time-grid-container {
+    overflow-x: visible!important;
+}
 	/* Nav buttons style */
 span.fc-icon {
     height: initial;
