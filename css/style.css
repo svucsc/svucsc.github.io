@@ -17,6 +17,11 @@ h2 {
     padding-top: 37px;
     text-shadow: 0px 1px 5px #333;
 }
+@media screen and (max-width: 550px) {
+#week,#month {
+    display: none;
+}
+}
 /* 2 - Calendar Group Classes */
 .academics-cal {
   background: #2da26c;
