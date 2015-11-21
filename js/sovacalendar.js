@@ -49,6 +49,18 @@ $(document).ready(function() {
                 $('#calendar').fullCalendar('changeView', 'basicDay');
                 $('#calendar').fullCalendar('gotoDate', date);
             }
+        },
+        //Event Modal Call
+        eventClick:  function(event, jsEvent, view) {
+          //field injections
+            $('#modalTitle').html(event.title);
+            $('#description').html('Description: ' + event.description);
+            $('#location').html('Location: ' + event.location);
+            $('#time').html('Time: ' + event.start.format() + ' to ' + event.end.format());
+            //modal call per the materializecss documentation
+            $('#eventModal').openModal();
+            //this prevents the eventclick redirect to google
+            return false;
         }
     //End fullcalendar brackets
     });
