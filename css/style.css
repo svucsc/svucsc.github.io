@@ -196,11 +196,13 @@ th.fc-day-header.fc-widget-header {
 }
 td.fc-event-container {
     padding: 0 3px;
+    cursor: pointer;
 }
 a.fc-day-grid-event.fc-h-event.fc-event.fc-start.fc-end {
     padding: 0 4px 0 9px;
 }
 td.fc-day-number {
+    cursor: pointer;
     font-weight: 300;
     font-size: 1.3em;
 }
