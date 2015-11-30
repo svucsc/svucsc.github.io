@@ -120,8 +120,8 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
     height: 140px;
     line-height: 64px;
 }
--div#index-banner {
--    margin-top: -140px;
+div#index-banner {
+    margin-top: -140px;
 }
 	/* Switch Color */
 .switch label .lever {
