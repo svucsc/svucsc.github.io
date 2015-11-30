@@ -2,6 +2,8 @@ $(document).ready(function() {
     $('#calendar').fullCalendar({
         //Calendar API key
         googleCalendarApiKey: 'AIzaSyDereJ50sioVk1EKNXt7m-dtNhEYweC_5A',
+        //Do not display default header
+        header:false,
         //Allow the calendar to display 4,5 and 6 weeks depending on the month
         fixedWeekCount: false,
         //Do not use aspect ratio height calculations
