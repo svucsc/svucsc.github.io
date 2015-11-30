@@ -150,6 +150,10 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
 .fc-unthemed .fc-today {
     background: rgba(238,238,238,.6);
 }
+	/* Basic Day Today Highlight Color */
+.fc-basicDay-view .fc-today {
+    background: rgba(255,255,255,0);
+}
 	/* Control buttons padding */
 .fc-right {
     padding-top: 34px;
