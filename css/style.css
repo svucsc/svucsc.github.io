@@ -154,6 +154,10 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
 .fc-basicDay-view .fc-today {
     background: rgba(255,255,255,0);
 }
+	/* Removing Border on Day view */
+.fc-basicDay-view .fc-today td {
+    border: none;
+}
 	/* Control buttons padding */
 .fc-right {
     padding-top: 34px;
