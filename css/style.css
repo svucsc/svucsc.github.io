@@ -120,8 +120,8 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
     height: 140px;
     line-height: 64px;
 }
-div#index-banner {
-    margin-top: -140px;
+.section {
+    padding-top: 0;
 }
 	/* Switch Color */
 .switch label .lever {
@@ -203,7 +203,6 @@ td.fc-day-number {
 .fc-unthemed th, .fc-unthemed td, .fc-unthemed thead, .fc-unthemed tbody, .fc-unthemed .fc-divider, .fc-unthemed .fc-row, .fc-unthemed .fc-popover {
     border-color: #eee;
 }
-
 	/* Nav buttons style */
 span.fc-icon {
     height: initial;
@@ -215,7 +214,6 @@ button.fc-today-button {
 .fc .fc-button-group > * {
     margin: 0 0 0 9px;
 }
-
 	/* Set month weeks min height */
 .fc-basic-view .fc-body .fc-row {
     min-height: 10em;
