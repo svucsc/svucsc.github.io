@@ -56,8 +56,11 @@ $(document).ready(function() {
             $('#modalTitle').html(event.title);
             $('#description').html('Description: ' + event.description);
             $('#location').html('Location: ' + event.location);
-            $('#time').html('Time: ' + event.start.format() + ' to ' + event.end.format());
-            //modal call per the materializecss documentation
+            var startTime = new Date(event.start);
+            var endTime = new Date(event.end);
+            $('#date').html('Date: ' + startTime.toLocaleDateString());
+            $('#time').html('Time: ' + startTime.toLocaleTimeString() + ' to ' + endTime.toLocaleTimeString());
+            //modal call per the materialize.css documentation
             $('#eventModal').openModal();
             //this prevents the eventclick redirect to google
             return false;
