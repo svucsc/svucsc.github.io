@@ -18,7 +18,7 @@ h2 {
     text-shadow: 0px 1px 5px #333;
 }
 @media screen and (max-width: 550px) {
-#week,#month {
+#week {
     display: none;
 }
 }
@@ -241,4 +241,24 @@ button.fc-today-button {
 	/* This is messy - it prevents the clipping on day view */
 .fc-row.fc-week.fc-widget-content.fc-rigid {
     min-height: 300px;
+}
+	/* This sets up the month view for mobile users */
+@media screen and (max-width: 550px) {
+.fc-month-view.fc-basic-view .fc-body .fc-row {
+min-height: 60px;
+}
+
+.fc-month-view .fc-content {
+    display: none;
+}
+td.fc-day.fc-widget-content {
+    border: none;
+}
+.fc-ltr .fc-basic-view .fc-day-number {
+    text-align: center;
+    padding-top: 7px;
+}
+td.fc-more-cell {
+    display: none;
+}
 }
