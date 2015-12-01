@@ -161,8 +161,14 @@ div#index-banner {
 	/* Control buttons padding */
 .fc-right {
     padding-top: 34px;
+    padding-left: 23px;
 }
-
+@media screen and (max-width: 576px) {
+.fc-right {
+    float: left!important;
+    padding-top: 16px;
+}
+}
 	/* Align day numbers left */
 .fc-ltr .fc-basic-view .fc-day-number {
     text-align: left;
