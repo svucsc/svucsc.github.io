@@ -153,4 +153,9 @@ $(document).ready(function() {
         $('#calendar').fullCalendar('changeView', 'month');
     }
   });
+      if ($(window).width() < 650) {
+        $('#calendar').fullCalendar('changeView', 'basicDay');
+    } else {
+        $('#calendar').fullCalendar('changeView', 'month');
+    }
 });
