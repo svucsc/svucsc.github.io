@@ -145,7 +145,7 @@ div#index-banner {
     top: 10px;
     right: 10px;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 517px) {
 .fc-toolbar {
     margin: 0 15px 0 100px;
 }
@@ -167,7 +167,7 @@ div#index-banner {
     padding-top: 34px;
     padding-left: 23px;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 604px) {
 .fc-right {
     float: left!important;
     padding-top: 16px;
