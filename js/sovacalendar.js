@@ -150,7 +150,7 @@ $(document).ready(function() {
     if ($(window).width() < 650) {
         $('#calendar').fullCalendar('changeView', 'basicDay');
     } else {
-        //do nothing
+        $('#calendar').fullCalendar('changeView', 'month');
     }
   });
 });
