@@ -145,7 +145,11 @@ div#index-banner {
     top: 10px;
     right: 10px;
 }
-
+@media screen and (max-width: 576px) {
+.fc-toolbar {
+    margin: 0 50px 0 100px;
+}
+}
 	/* Today Highlight Color */
 .fc-unthemed .fc-today {
     background: rgba(238,238,238,.6);
