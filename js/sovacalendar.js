@@ -146,9 +146,11 @@ $(document).ready(function() {
         $('.button-collapse').sideNav('hide');
     });
     //Default view for mobile users
+    $(window).resize(function() {
     if ($(window).width() < 650) {
         $('#calendar').fullCalendar('changeView', 'basicDay');
     } else {
         //do nothing
     }
+  });
 });
