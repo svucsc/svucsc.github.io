@@ -251,14 +251,18 @@ min-height: 60px;
 .fc-month-view .fc-content {
     display: none;
 }
-td.fc-day.fc-widget-content {
+.fc-month-view td.fc-event-container {
+    pointer-events: none;
+    cursor: default;
+}
+.fc-month-view td.fc-day.fc-widget-content {
     border: none;
 }
 .fc-ltr .fc-basic-view .fc-day-number {
     text-align: center;
     padding-top: 7px;
 }
-td.fc-more-cell {
+.fc-month-view td.fc-more-cell {
     display: none;
 }
 }
