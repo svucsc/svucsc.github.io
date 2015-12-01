@@ -147,7 +147,7 @@ div#index-banner {
 }
 @media screen and (max-width: 576px) {
 .fc-toolbar {
-    margin: 0 50px 0 100px;
+    margin: 0 15px 0 100px;
 }
 }
 	/* Today Highlight Color */
