@@ -49,6 +49,7 @@ $(document).ready(function() {
                 $('#calendar').fullCalendar('changeView', 'basicDay');
                 $('#calendar').fullCalendar('gotoDate', date);
             }
+			getMonth();
         },
         //Event Modal Call
         eventClick:  function(event, jsEvent, view) {
@@ -67,6 +68,60 @@ $(document).ready(function() {
         }
     //End fullcalendar brackets
     });
+	//Switching the Banners
+	
+		  function getMonth(){
+      var moment = $("#calendar").fullCalendar('getDate');
+      var month_int = moment.format('MM');
+  //you now have the visible month as an integer from 01-12
+	
+      if(month_int == '01'){
+		  $("#main-nav").removeClass();
+		  $("#main-nav").addClass("Jan");
+	  } else if (month_int == '02'){
+		  $("#main-nav").removeClass();
+		  $("#main-nav").addClass("Feb");
+	  } else if (month_int == '03'){
+		  $("#main-nav").removeClass();
+		  $("#main-nav").addClass("Mar");
+	  } else if (month_int == '04'){
+		  $("#main-nav").removeClass();
+		  $("#main-nav").addClass("Apr");
+	  } else if (month_int == '05'){
+		  $("#main-nav").removeClass();
+		  $("#main-nav").addClass("May");
+	  } else if (month_int == '06'){
+		  $("#main-nav").removeClass();
+		  $("#main-nav").addClass("Jun");
+	  } else if (month_int == '07'){
+		  $("#main-nav").removeClass();
+		  $("#main-nav").addClass("Jul");
+	  } else if (month_int == '08'){
+		  $("#main-nav").removeClass();
+		  $("#main-nav").addClass("Aug");
+	  } else if (month_int == '09'){
+		  $("#main-nav").removeClass();
+		  $("#main-nav").addClass("Sept");
+	  } else if (month_int == '10'){
+		  $("#main-nav").removeClass();
+		  $("#main-nav").addClass("Oct");
+	  } else if (month_int == '11'){
+		  $("#main-nav").removeClass();
+		  $("#main-nav").addClass("Nov");
+	  } else {
+		  $("#main-nav").removeClass();
+		  $("#main-nav").addClass("Dec");
+	  } 
+	
+}
+	
+	getMonth();
+	
+	$('.fc-right').click(function() {
+    getMonth();
+});
+		  
+	 
     //Calendar toggles
     $('#academics').click(function() {
         if (this.checked) {
@@ -132,18 +187,22 @@ $(document).ready(function() {
     $("#day").click(function() {
         $('#calendar').fullCalendar('changeView', 'basicDay');
         $('.button-collapse').sideNav('hide');
+		getMonth();
     });
     $("#threeday").click(function() {
         $('#calendar').fullCalendar('changeView', 'agendaThreeDay');
         $('.button-collapse').sideNav('hide');
+		getMonth();
     });
     $("#week").click(function() {
         $('#calendar').fullCalendar('changeView', 'agendaWeek');
         $('.button-collapse').sideNav('hide');
+		getMonth();
     });
     $("#month").click(function() {
         $('#calendar').fullCalendar('changeView', 'month');
         $('.button-collapse').sideNav('hide');
+		getMonth();
     });
       if ($(window).width() < 650) {
         $('#calendar').fullCalendar('changeView', 'basicDay');

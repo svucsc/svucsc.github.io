@@ -108,9 +108,46 @@ a.subscribe {
 .calendar-list li {
     padding: 0 0 0 32px;
 }
+    /* Banner Classes  */
+.Jan {
+	 background-image: url("http://svucsc.github.io/img/winter.jpg");
+}
+.Feb {
+	 background-image: url("http://svucsc.github.io/img/calendar.jpg");
+}
+.Mar {
+	 background-image: url("http://svucsc.github.io/img/calendar.jpg");
+}
+.Apr {
+	 background-image: url("http://svucsc.github.io/img/spring.jpg");
+}
+.May {
+	 background-image: url("http://svucsc.github.io/img/spring.jpg");
+}
+.Jun {
+	 background-image: url("http://svucsc.github.io/img/summer2.jpg");
+}
+.Jul {
+	 background-image: url("http://svucsc.github.io/img/summer2.jpg");
+}
+.Aug {
+	 background-image: url("http://svucsc.github.io/img/clouds.jpg");
+}
+.Sept {
+	 background-image: url("http://svucsc.github.io/img/clouds.jpg");
+}
+.Oct {
+	 background-image: url("http://svucsc.github.io/img/fall.jpg");
+}
+.Nov {
+	 background-image: url("http://svucsc.github.io/img/fall.jpg");
+}
+.Dec {
+	 background-image: url("http://svucsc.github.io/img/winter.jpg");
+}
+	
 	/* Adjust 140px header  */
 nav {
-    background-image: url("http://svucsc.github.io/img/banner.jpg");
     background-size: auto 112%;
     background-position: center;
     box-shadow: none;
