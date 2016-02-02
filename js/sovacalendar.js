@@ -55,12 +55,35 @@ $(document).ready(function() {
         eventClick:  function(event, jsEvent, view) {
           //field injections
             $('#modalTitle').html(event.title);
-            $('#description').html('Description: ' + event.description);
+			if(event.description == undefined){
+				 event.decription = " ";
+			} else {
+			     event.description = event.description;
+		}
+            $('#description').html(event.decription);
             $('#location').html('Location: ' + event.location);
             var startTime = new Date(event.start);
             var endTime = new Date(event.end);
-            $('#date').html('Date: ' + startTime.toLocaleDateString());
-            $('#time').html('Time: ' + startTime.toLocaleTimeString() + ' to ' + endTime.toLocaleTimeString());
+			var sTime = moment(startTime).format("h:mm a");
+			var eTime = moment(endTime).format("h:mm a");
+			var monthTest = moment(startTime).format("M");
+			if(monthTest == 3){
+				var sDate = moment(startTime).format("dddd, MMMM D, YYYY");
+			} else if(monthTest == 4){
+				var sDate = moment(startTime).format("dddd, MMMM D, YYYY");
+				
+			} else if(monthTest == 6){
+				var sDate = moment(startTime).format("dddd, MMMM D, YYYY");
+				
+			} else if(monthTest == 7){
+				var sDate = moment(startTime).format("dddd, MMMM D, YYYY");
+				
+			} else {
+				
+			var sDate = moment(startTime).format("dddd, MMM. D, YYYY");
+			}
+            $('#date').html('Date: ' + sDate);
+            $('#time').html('Time: ' + sTime + ' to ' + eTime);
             //modal call per the materialize.css documentation
             $('#eventModal').openModal();
             //this prevents the eventclick redirect to google
