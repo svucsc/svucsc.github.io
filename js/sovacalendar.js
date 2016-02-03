@@ -56,12 +56,12 @@ $(document).ready(function() {
           //field injections
             $('#modalTitle').html(event.title);
 			if(event.description == undefined){
-				 event.decription = " ";
+				 $('#description').html("No Description Available");
 			} else {
-			     event.description = event.description;
+				$('#description').html(' ' + event.description);
 		}
-            $('#description').html(event.decription);
-            $('#location').html('Location: ' + event.location);
+            
+            $('#location').html(event.location);
             var startTime = new Date(event.start);
             var endTime = new Date(event.end);
 			var sTime = moment(startTime).format("h:mm a");
@@ -82,8 +82,8 @@ $(document).ready(function() {
 				
 			var sDate = moment(startTime).format("dddd, MMM. D, YYYY");
 			}
-            $('#date').html('Date: ' + sDate);
-            $('#time').html('Time: ' + sTime + ' to ' + eTime);
+            $('#date').html(sDate);
+            $('#time').html(sTime + ' to ' + eTime);
             //modal call per the materialize.css documentation
             $('#eventModal').openModal();
             //this prevents the eventclick redirect to google
@@ -144,7 +144,14 @@ $(document).ready(function() {
     getMonth();
 });
 		  
-	 
+	 // JumpToDate
+	
+
+
+
+
+
+
     //Calendar toggles
     $('#academics').click(function() {
         if (this.checked) {
