@@ -150,7 +150,8 @@ function transformOptions(sourceOptions, start, end, timezone, calendar) {
 						end: entry.end.dateTime || entry.end.date, // same
 						url: url,
 						location: entry.location,
-						description: entry.description
+						description: entry.description,
+						colorId: entry.color
 					});
 				});
 

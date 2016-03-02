@@ -62,6 +62,7 @@ $(document).ready(function() {
 		}
             
             $('#location').html(event.location);
+			$('#colorId').html(event.colorId);
             var startTime = new Date(event.start);
             var endTime = new Date(event.end);
 			var sTime = moment(startTime).format("h:mm a");
@@ -91,6 +92,7 @@ $(document).ready(function() {
         }
     //End fullcalendar brackets
     });
+    
 	//Switching the Banners
 	
 		  function getMonth(){
@@ -143,8 +145,15 @@ $(document).ready(function() {
 	$('.fc-right').click(function() {
     getMonth();
 });
-		  
-	 // JumpToDate
+	 // Back Button
+	    var view = $('#calendar').fullCalendar('getView');
+        var back = view.name;	 
+$("#prev").click(function() {
+        $('#calendar').fullCalendar('changeView', back);
+        $('.button-collapse').sideNav('hide');
+		getMonth();
+    });
+	
 	
 
 
@@ -215,21 +224,29 @@ $(document).ready(function() {
     })
     //View buttons for sidenav
     $("#day").click(function() {
+		view = $('#calendar').fullCalendar('getView');
+        back = view.name;
         $('#calendar').fullCalendar('changeView', 'basicDay');
         $('.button-collapse').sideNav('hide');
 		getMonth();
     });
     $("#threeday").click(function() {
+		view = $('#calendar').fullCalendar('getView');
+        back = view.name;
         $('#calendar').fullCalendar('changeView', 'agendaThreeDay');
         $('.button-collapse').sideNav('hide');
 		getMonth();
     });
     $("#week").click(function() {
+		view = $('#calendar').fullCalendar('getView');
+        back = view.name;
         $('#calendar').fullCalendar('changeView', 'agendaWeek');
         $('.button-collapse').sideNav('hide');
 		getMonth();
     });
     $("#month").click(function() {
+		view = $('#calendar').fullCalendar('getView');
+        back = view.name;
         $('#calendar').fullCalendar('changeView', 'month');
         $('.button-collapse').sideNav('hide');
 		getMonth();
