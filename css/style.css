@@ -11,6 +11,9 @@ Table of Contents
 body {
   overflow-x: hidden;
 }
+.fc-day-grid-event:hover{
+	opacity: 0.9;
+}
 h2 {
     color: #fff;
     font-size: 28px;
