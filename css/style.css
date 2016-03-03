@@ -8,9 +8,15 @@ Table of Contents
 */
 
 /* 1 - General Classes */
+
+.modal {
+	
+	max-height: 75%;
+	width: 35%;
+}
 @media screen and (max-width: 480px) {
-    #eventModal {
-        width: 60%;
+    .modal {
+        width: 75%;
     }
 }
 body {
