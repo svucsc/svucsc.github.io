@@ -8,6 +8,11 @@ Table of Contents
 */
 
 /* 1 - General Classes */
+@media screen and (max-width: 480px) {
+    #eventModal {
+        width: 60%;
+    }
+}
 body {
   overflow-x: hidden;
 }
