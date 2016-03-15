@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	 
     $('#calendar').fullCalendar({
         //Calendar API key
         googleCalendarApiKey: 'AIzaSyDereJ50sioVk1EKNXt7m-dtNhEYweC_5A',
@@ -15,6 +16,9 @@ $(document).ready(function() {
         }, {
             googleCalendarId: 'svu.edu_nf5v7viog32c563doboaljtf4o@group.calendar.google.com',
             className: 'academics-cal'
+        }, {
+            googleCalendarId: ' svu.edu_tsbvq83kmqb2qe1qnocjd7v5f4@group.calendar.google.com',
+            className: 'clubs-cal'
         }, {
             googleCalendarId: 'svu.edu_cpmvje154c4g2gkvk545i6pmqk@group.calendar.google.com',
             className: 'activities-cal'
@@ -54,7 +58,9 @@ $(document).ready(function() {
         //Event Modal Call
         eventClick:  function(event, jsEvent, view) {
           //field injections
+
             $('#modalTitle').html(event.title);
+			
 			if(event.description == undefined){
 				 $('#description').html("No Description Available");
 			} else {
@@ -94,7 +100,6 @@ $(document).ready(function() {
     });
     
 	//Switching the Banners
-	
 		  function getMonth(){
       var moment = $("#calendar").fullCalendar('getDate');
       var month_int = moment.format('MM');
@@ -170,6 +175,16 @@ $("#prev").click(function() {
             });
         } else {
             $('#calendar').fullCalendar('removeEventSource', 'svu.edu_nf5v7viog32c563doboaljtf4o@group.calendar.google.com')
+        }
+    })
+	$('#clubs').click(function() {
+        if (this.checked) {
+            $('#calendar').fullCalendar('addEventSource', {
+                url: "svu.edu_tsbvq83kmqb2qe1qnocjd7v5f4@group.calendar.google.com",
+                color: 'rgba(255,209,0, 0.8)'
+            });
+        } else {
+            $('#calendar').fullCalendar('removeEventSource', 'svu.edu_tsbvq83kmqb2qe1qnocjd7v5f4@group.calendar.google.com')
         }
     })
     $('#activities').click(function() {

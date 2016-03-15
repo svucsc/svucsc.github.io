@@ -51,6 +51,13 @@ h2 {
 #activities.filled-in:checked+label:after {
     background-color: #029AE4;
 }
+.clubs-cal {
+  background: #FFD100;
+  border: 1px solid #FFD100;
+}
+#clubs.filled-in:checked+label:after {
+    background-color: #FFD100;
+}
 .arts-cal {
   background: #7E57C2;
   border: 1px solid #7E57C2;
