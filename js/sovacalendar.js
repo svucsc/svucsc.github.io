@@ -39,6 +39,9 @@ $(document).ready(function() {
             month: {
                 eventLimit: 5
             },
+			basicDay: {
+                eventLimit: 11
+            },
             agendaThreeDay: {
                 type: 'agenda',
                 duration: {
@@ -150,6 +153,7 @@ $(document).ready(function() {
 	$('.fc-right').click(function() {
     getMonth();
 });
+
 	 // Back Button
 	    var view = $('#calendar').fullCalendar('getView');
         var back = view.name;	 
