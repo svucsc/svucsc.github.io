@@ -69,14 +69,70 @@ $(document).ready(function() {
 			} else {
 				$('#description').html(' ' + event.description);
 		}
+		
+		if(event.location == undefined){
+				 $('#location').html("");
+			} else {
+				$('#location').html(' ' + event.location);
+		}
             
-            $('#location').html(event.location);
 			$('#colorId').html(event.colorId);
             var startTime = new Date(event.start);
             var endTime = new Date(event.end);
 			var sTime = moment(startTime).format("h:mm a");
 			var eTime = moment(endTime).format("h:mm a");
-			var monthTest = moment(startTime).format("M");
+			if(sTime == eTime){
+				$('#time').html("All Day Event");
+				
+				
+			
+			 var eDate = moment(endTime).format("D, YYYY");
+			 
+			
+				var monthTest = moment(startTime).format("M");
+				var monthTest2 = monthTest-1;
+			if(monthTest == 3){
+				 sDate = moment(startTime).format("MMMM D");
+				 var new_day = moment(sDate, "DD-MM-YYYY").add(1, 'days');
+				 new_day = moment(new_day).format("MMMM D");
+				 var new_month = moment(new_day, "DD-MM-YYYY").add(monthTest2, 'months');
+				 new_month = moment(new_month).format("MMMM D");
+				 
+				 
+			} else if(monthTest == 4){
+				 sDate = moment(startTime).format("MMMM D");
+				 var new_day = moment(sDate, "DD-MM-YYYY").add(1, 'days');
+				 new_day = moment(new_day).format("MMMM D");
+				 var new_month = moment(new_day, "DD-MM-YYYY").add(monthTest2, 'months');
+				 new_month = moment(new_month).format("MMMM D");
+				
+			} else if(monthTest == 6){
+				 sDate = moment(startTime).format("MMMM D");
+				 var new_day = moment(sDate, "DD-MM-YYYY").add(1, 'days');
+				 new_day = moment(new_day).format("MMMM D");
+				 var new_month = moment(new_day, "DD-MM-YYYY").add(monthTest2, 'months');
+				 new_month = moment(new_month).format("MMMM D");
+				
+			} else if(monthTest == 7){
+				 sDate = moment(startTime).format("MMMM D");
+				 var new_day = moment(sDate, "DD-MM-YYYY").add(1, 'days');
+				 new_day = moment(new_day).format("MMMM D");
+				 var new_month = moment(new_day, "DD-MM-YYYY").add(monthTest2, 'months');
+				 new_month = moment(new_month).format("MMMM D");
+				
+			} else {
+				
+			 sDate = moment(startTime).format("MMM. D");
+				 var new_day = moment(sDate, "DD-MM-YYYY").add(1, 'days');
+				 new_day = moment(new_day).format("MMM. D");
+				 var new_month = moment(new_day, "DD-MM-YYYY").add(monthTest2, 'months');
+				 new_month = moment(new_month).format("MMM. D");
+			}
+			$('#date').html(new_month + ' - ' + eDate);
+				
+			} else {
+				$('#time').html(sTime + ' to ' + eTime);
+				var monthTest = moment(startTime).format("M");
 			if(monthTest == 3){
 				var sDate = moment(startTime).format("dddd, MMMM D, YYYY");
 			} else if(monthTest == 4){
@@ -92,8 +148,10 @@ $(document).ready(function() {
 				
 			var sDate = moment(startTime).format("dddd, MMM. D, YYYY");
 			}
-            $('#date').html(sDate);
-            $('#time').html(sTime + ' to ' + eTime);
+			$('#date').html(sDate);
+			}
+			
+            
             //modal call per the materialize.css documentation
             $('#eventModal').openModal();
             //this prevents the eventclick redirect to google
@@ -185,7 +243,7 @@ $("#prev").click(function() {
         if (this.checked) {
             $('#calendar').fullCalendar('addEventSource', {
                 url: "svu.edu_tsbvq83kmqb2qe1qnocjd7v5f4@group.calendar.google.com",
-                color: 'rgba(255,209,0, 0.8)'
+                color: '#7E57C2'
             });
         } else {
             $('#calendar').fullCalendar('removeEventSource', 'svu.edu_tsbvq83kmqb2qe1qnocjd7v5f4@group.calendar.google.com')
