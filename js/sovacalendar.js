@@ -243,7 +243,7 @@ $("#prev").click(function() {
         if (this.checked) {
             $('#calendar').fullCalendar('addEventSource', {
                 url: "svu.edu_tsbvq83kmqb2qe1qnocjd7v5f4@group.calendar.google.com",
-                color: '#7E57C2'
+                color: 'rgba(255,209,0, 0.8)'
             });
         } else {
             $('#calendar').fullCalendar('removeEventSource', 'svu.edu_tsbvq83kmqb2qe1qnocjd7v5f4@group.calendar.google.com')
