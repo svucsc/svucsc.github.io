@@ -73,9 +73,10 @@ $(document).ready(function() {
         //Event Modal Call
         eventClick: function(event, jsEvent, view) {
             //field injections
-
             $('#modalTitle').html(event.title);
 
+            $("#modalTitle").addClass(this.className);
+            $('#modalTitle')[0].className = $('#modalTitle')[0].className.replace(/\bfc.*?\b/g, '');
             if (event.description == undefined) {
                 $('#description').html("No Description Available");
             } else {
@@ -88,7 +89,6 @@ $(document).ready(function() {
                 $('#location').html(' ' + event.location);
             }
 
-            $('#colorId').html(event.colorId);
             var startTime = new Date(event.start);
             var endTime = new Date(event.end);
             var sTime = moment(startTime).format("h:mm a");
@@ -96,10 +96,7 @@ $(document).ready(function() {
             if (sTime == eTime) {
                 $('#time').html("All Day Event");
 
-
-
                 var eDate = moment(endTime).format("D, YYYY");
-
 
                 var monthTest = moment(startTime).format("M");
                 var monthTest2 = monthTest - 1;
