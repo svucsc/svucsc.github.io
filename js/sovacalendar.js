@@ -81,6 +81,8 @@ $(document).ready(function() {
             var endTime = new Date(event.end);
 			var sTime = moment(startTime).format("h:mm a");
 			var eTime = moment(endTime).format("h:mm a");
+			
+			//all day modal event
 			if(sTime == eTime){
 				$('#time').html("All Day Event");
 				
@@ -91,67 +93,81 @@ $(document).ready(function() {
 			
 				var monthTest = moment(startTime).format("M");
 				var monthTest2 = monthTest-1;
-			if(monthTest == 3){
+				//testing for abbrev. and fixing moment date for all day events
+			switch(monthTest){
+				
+				case 3:
 				 sDate = moment(startTime).format("MMMM D");
+				 // all day event was 1 day behind add 1 day
 				 var new_day = moment(sDate, "DD-MM-YYYY").add(1, 'days');
 				 new_day = moment(new_day).format("MMMM D");
+				 // all day event month moved back to Jan, add months to get to event month
 				 var new_month = moment(new_day, "DD-MM-YYYY").add(monthTest2, 'months');
 				 new_month = moment(new_month).format("MMMM D");
+				 break;
 				 
-				 
-			} else if(monthTest == 4){
+				case 4:
 				 sDate = moment(startTime).format("MMMM D");
 				 var new_day = moment(sDate, "DD-MM-YYYY").add(1, 'days');
 				 new_day = moment(new_day).format("MMMM D");
 				 var new_month = moment(new_day, "DD-MM-YYYY").add(monthTest2, 'months');
 				 new_month = moment(new_month).format("MMMM D");
+				 break;
 				
-			} else if(monthTest == 6){
+			    case 6:
 				 sDate = moment(startTime).format("MMMM D");
 				 var new_day = moment(sDate, "DD-MM-YYYY").add(1, 'days');
 				 new_day = moment(new_day).format("MMMM D");
 				 var new_month = moment(new_day, "DD-MM-YYYY").add(monthTest2, 'months');
 				 new_month = moment(new_month).format("MMMM D");
+				 break;
 				
-			} else if(monthTest == 7){
+			    case 7:
 				 sDate = moment(startTime).format("MMMM D");
 				 var new_day = moment(sDate, "DD-MM-YYYY").add(1, 'days');
 				 new_day = moment(new_day).format("MMMM D");
 				 var new_month = moment(new_day, "DD-MM-YYYY").add(monthTest2, 'months');
 				 new_month = moment(new_month).format("MMMM D");
+				 break;
 				
-			} else {
-				
-			 sDate = moment(startTime).format("MMM. D");
+			    default:
+				 sDate = moment(startTime).format("MMM. D");
 				 var new_day = moment(sDate, "DD-MM-YYYY").add(1, 'days');
 				 new_day = moment(new_day).format("MMM. D");
 				 var new_month = moment(new_day, "DD-MM-YYYY").add(monthTest2, 'months');
 				 new_month = moment(new_month).format("MMM. D");
+				 break;
 			}
 			$('#date').html(new_month + ' - ' + eDate);
 				
 			} else {
 				$('#time').html(sTime + ' to ' + eTime);
 				var monthTest = moment(startTime).format("M");
-			if(monthTest == 3){
+				//testing if month needs abbreviation or not
+			switch(monthTest) {
+				// ex. Wednesday, March 3, 2016
+				case 3:
 				var sDate = moment(startTime).format("dddd, MMMM D, YYYY");
-			} else if(monthTest == 4){
+				break;
+			
+			    case 4:
 				var sDate = moment(startTime).format("dddd, MMMM D, YYYY");
+				break;
 				
-			} else if(monthTest == 6){
+			    case 6:
 				var sDate = moment(startTime).format("dddd, MMMM D, YYYY");
+				break;
 				
-			} else if(monthTest == 7){
+			    case 7:
 				var sDate = moment(startTime).format("dddd, MMMM D, YYYY");
-				
-			} else {
-				
-			var sDate = moment(startTime).format("dddd, MMM. D, YYYY");
+				break;
+				// ex. Friday, Jan. 30, 2016
+			    default:
+				var sDate = moment(startTime).format("dddd, MMM. D, YYYY");
+				break;
 			}
 			$('#date').html(sDate);
 			}
-			
-            
             //modal call per the materialize.css documentation
             $('#eventModal').openModal();
             //this prevents the eventclick redirect to google
@@ -222,6 +238,7 @@ $("#prev").click(function() {
     });
 	
 	
+// test stuff
 
 
 
