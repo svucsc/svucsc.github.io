@@ -12,25 +12,25 @@ $(document).ready(function() {
         //Pull in all calendars
         eventSources: [{
             googleCalendarId: 'usa__en@holiday.calendar.google.com',
-            className: 'holiday-cal'
+            className: 'svu-holiday-cal'
         }, {
             googleCalendarId: 'svu.edu_nf5v7viog32c563doboaljtf4o@group.calendar.google.com',
-            className: 'academics-cal'
+            className: 'svu-academics-cal'
         }, {
             googleCalendarId: ' svu.edu_tsbvq83kmqb2qe1qnocjd7v5f4@group.calendar.google.com',
-            className: 'clubs-cal'
+            className: 'svu-clubs-cal'
         }, {
             googleCalendarId: 'svu.edu_cpmvje154c4g2gkvk545i6pmqk@group.calendar.google.com',
-            className: 'activities-cal'
+            className: 'svu-activities-cal'
         }, {
             googleCalendarId: 'svu.edu_9cv92psfm81gqmcdr8ok95odes@group.calendar.google.com',
-            className: 'arts-cal'
+            className: 'svu-arts-cal'
         }, {
             googleCalendarId: 'svu.edu_fe3j597hjc9bf2t0fb7nni6sf8@group.calendar.google.com',
-            className: 'athletics-cal'
+            className: 'svu-athletics-cal'
         }, {
             googleCalendarId: 'svu.edu_lg0oft04slbt53v0knekmtn60o@group.calendar.google.com',
-            className: 'religious-cal'
+            className: 'svu-religious-cal'
         }],
         //Limit the number of events displayed
         eventLimit: true,
@@ -74,9 +74,12 @@ $(document).ready(function() {
         eventClick: function(event, jsEvent, view) {
             //field injections
             $('#modalTitle').html(event.title);
-
+            //remove all classes then add the new svu- class and remove all fc- prefixed classes
+            $("#modalTitle").removeClass();
             $("#modalTitle").addClass(this.className);
-            $('#modalTitle')[0].className = $('#modalTitle')[0].className.replace(/\bfc.*?\b/g, '');
+            $("#modalTitle").removeClass('fc-day-grid-event fc-h-event fc-event fc-start fc-end fc-time-grid-event fc-v-event');
+
+
             if (event.description == undefined) {
                 $('#description').html("No Description Available");
             } else {

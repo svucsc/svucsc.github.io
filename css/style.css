@@ -37,49 +37,49 @@ body {
 }
 }
 /* 2 - Calendar Group Classes */
-.academics-cal {
+.svu-academics-cal {
   background: #2da26c;
   border: 1px solid #2da26c;
 }
 #academics.filled-in:checked+label:after {
     background-color: #2da26c;
 }
-.activities-cal {
+.svu-activities-cal {
   background: #029AE4;
   border: 1px solid #029AE4;
 }
 #activities.filled-in:checked+label:after {
     background-color: #029AE4;
 }
-.clubs-cal {
+.svu-clubs-cal {
   background: #FFD100;
   border: 1px solid #FFD100;
 }
 #clubs.filled-in:checked+label:after {
     background-color: #FFD100;
 }
-.arts-cal {
+.svu-arts-cal {
   background: #7E57C2;
   border: 1px solid #7E57C2;
 }
 #arts.filled-in:checked+label:after {
     background-color: #7E57C2;
 }
-.athletics-cal {
+.svu-athletics-cal {
   background: #EF5350;
   border: 1px solid #EF5350;
 }
 #athletics.filled-in:checked+label:after {
     background-color: #EF5350;
 }
-.religious-cal {
+.svu-religious-cal {
   background: #FFB74D;
   border: 1px solid #FFB74D;
 }
 #religious.filled-in:checked+label:after {
     background-color: #FFB74D;
 }
-.holiday-cal {
+.svu-holiday-cal {
   background: #607D8B;
   border: 1px solid #607D8B;
 }
