@@ -10,7 +10,7 @@ Table of Contents
 /* 1 - General Classes */
 
 .modal {
-	
+
 	max-height: 75%;
 	width: 35%;
 }
@@ -25,9 +25,9 @@ body {
 .fc-day-grid-event:hover{
 	opacity: 0.9;
 }
-h2 {
+#calendar h2 {
     color: #fff;
-    font-size: 28px;
+    font-size: 30px;
     padding-top: 37px;
     text-shadow: 0px 1px 5px #333;
 }
@@ -37,49 +37,49 @@ h2 {
 }
 }
 /* 2 - Calendar Group Classes */
-.academics-cal {
+.svu-academics-cal {
   background: #2da26c;
   border: 1px solid #2da26c;
 }
 #academics.filled-in:checked+label:after {
     background-color: #2da26c;
 }
-.activities-cal {
+.svu-activities-cal {
   background: #029AE4;
   border: 1px solid #029AE4;
 }
 #activities.filled-in:checked+label:after {
     background-color: #029AE4;
 }
-.clubs-cal {
+.svu-clubs-cal {
   background: #FFD100;
   border: 1px solid #FFD100;
 }
 #clubs.filled-in:checked+label:after {
     background-color: #FFD100;
 }
-.arts-cal {
+.svu-arts-cal {
   background: #7E57C2;
   border: 1px solid #7E57C2;
 }
 #arts.filled-in:checked+label:after {
     background-color: #7E57C2;
 }
-.athletics-cal {
+.svu-athletics-cal {
   background: #EF5350;
   border: 1px solid #EF5350;
 }
 #athletics.filled-in:checked+label:after {
     background-color: #EF5350;
 }
-.religious-cal {
+.svu-religious-cal {
   background: #FFB74D;
   border: 1px solid #FFB74D;
 }
 #religious.filled-in:checked+label:after {
     background-color: #FFB74D;
 }
-.holiday-cal {
+.svu-holiday-cal {
   background: #607D8B;
   border: 1px solid #607D8B;
 }
@@ -98,11 +98,17 @@ i.mdi-navigation-menu {
     font-size: 32px;
     color: #fff;
 }
+@media screen and (max-width: 700px){
+i.mdi-navigation-menu {
+	padding: 34px 0 0 20px;
+}
+}
 i.material-icons {
     text-shadow: 1px 0px 6px #333;
     color: #fff;
     height: 60px;
 }
+
 a.dropdown-button {
     height: 62px;
 }
@@ -166,7 +172,7 @@ a.subscribe {
 .Dec {
 	 background-image: url("http://svucsc.github.io/img/winter.jpg");
 }
-	
+
 	/* Adjust 140px header  */
 nav {
     background-size: auto 112%;
@@ -203,14 +209,31 @@ div#index-banner {
     top: 10px;
     right: 10px;
 }
-@media screen and (max-width: 517px) {
+@media screen and (max-width: 700px){
+#calendar .fc-left {
+    float: none!important;
+		margin-right: 30px;
+}
 .fc-toolbar {
-    margin: 0 15px 0 100px;
+	margin: 0;
+}
+.fc .fc-toolbar > * > *{
+		float: none;
+}
+#calendar h2 {
+    padding-top: 20px;
+}
+.fc-right {
+    padding-top: 16px!important;
+    display: inline-flex;
+    float: none!important;
+		padding-left: 0px!important;
+		margin-left: -30px;
 }
 }
 	/* Today Highlight Color */
-.fc-unthemed .fc-today {
-    background: rgba(238,238,238,.6);
+.fc-unthemed .fc-today, .fc-state-highlight {
+	background: rgba(238,238,238,.6);
 }
 	/* Basic Day Today Highlight Color */
 .fc-basicDay-view .fc-today {
@@ -225,12 +248,7 @@ div#index-banner {
     padding-top: 34px;
     padding-left: 23px;
 }
-@media screen and (max-width: 604px) {
-.fc-right {
-    float: left!important;
-    padding-top: 16px;
-}
-}
+
 	/* Align day numbers left */
 .fc-ltr .fc-basic-view .fc-day-number {
     text-align: left;
@@ -292,6 +310,19 @@ button.fc-today-button {
 .fc .fc-button-group > * {
     margin: 0 0 0 9px;
 }
+.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .side-nav {
+	box-shadow: none;
+}
+.fc-state-disabled {
+	opacity: 1;
+}
+.fc-right button {
+	border: 1px #999 solid;
+}
+.fc button {
+	height: 2.4em;
+	padding: 0 1.5em;
+}
 	/* Set month weeks min height */
 .fc-basic-view .fc-body .fc-row {
     min-height: 10em;
@@ -322,5 +353,20 @@ min-height: 60px;
 }
 .fc-month-view td.fc-more-cell {
     display: none;
+}
+/* Styles for the day view on month view for mobile calendar */
+#calendar2 .fc-right, #calendar2 .fc-head {
+	display: none!important;
+}
+#calendar2 h2 {
+    font-size: 20px;
+    text-align: left;
+    padding: 20px 0 5px 10px;
+}
+#calendar2 td.fc-widget-content {
+    border: 0;
+}
+#calendar2 {
+    background-color: #eee;
 }
 }
