@@ -97,21 +97,21 @@ $(document).ready(function() {
 
 			var sTime = moment(startTime).format("h:mm a");
 			var eTime = moment(endTime).format("h:mm a");
-			
+
 			//all day modal event
 			if(sTime == eTime){
 				$('#time').html("All Day Event");
-				
-				
-			
+
+
+
 			 var eDate = moment(endTime).format("D, YYYY");
-			 
-			
+
+
 				var monthTest = moment(startTime).format("M");
 				var monthTest2 = monthTest-1;
 				//testing for abbrev. and fixing moment date for all day events
 			switch(monthTest){
-				
+
 				case 3:
 				 sDate = moment(startTime).format("MMMM D");
 				 // all day event was 1 day behind add 1 day
@@ -121,7 +121,7 @@ $(document).ready(function() {
 				 var new_month = moment(new_day, "DD-MM-YYYY").add(monthTest2, 'months');
 				 new_month = moment(new_month).format("MMMM D");
 				 break;
-				 
+
 				case 4:
 				 sDate = moment(startTime).format("MMMM D");
 				 var new_day = moment(sDate, "DD-MM-YYYY").add(1, 'days');
@@ -129,7 +129,7 @@ $(document).ready(function() {
 				 var new_month = moment(new_day, "DD-MM-YYYY").add(monthTest2, 'months');
 				 new_month = moment(new_month).format("MMMM D");
 				 break;
-				
+
 			    case 6:
 				 sDate = moment(startTime).format("MMMM D");
 				 var new_day = moment(sDate, "DD-MM-YYYY").add(1, 'days');
@@ -137,7 +137,7 @@ $(document).ready(function() {
 				 var new_month = moment(new_day, "DD-MM-YYYY").add(monthTest2, 'months');
 				 new_month = moment(new_month).format("MMMM D");
 				 break;
-				
+
 			    case 7:
 				 sDate = moment(startTime).format("MMMM D");
 				 var new_day = moment(sDate, "DD-MM-YYYY").add(1, 'days');
@@ -145,7 +145,7 @@ $(document).ready(function() {
 				 var new_month = moment(new_day, "DD-MM-YYYY").add(monthTest2, 'months');
 				 new_month = moment(new_month).format("MMMM D");
 				 break;
-				
+
 			    default:
 				 sDate = moment(startTime).format("MMM. D");
 				 var new_day = moment(sDate, "DD-MM-YYYY").add(1, 'days');
@@ -155,7 +155,7 @@ $(document).ready(function() {
 				 break;
 			}
 			$('#date').html(new_month + ' - ' + eDate);
-				
+
 			} else {
 				$('#time').html(sTime + ' to ' + eTime);
 				var monthTest = moment(startTime).format("M");
@@ -165,15 +165,15 @@ $(document).ready(function() {
 				case 3:
 				var sDate = moment(startTime).format("dddd, MMMM D, YYYY");
 				break;
-			
+
 			    case 4:
 				var sDate = moment(startTime).format("dddd, MMMM D, YYYY");
 				break;
-				
+
 			    case 6:
 				var sDate = moment(startTime).format("dddd, MMMM D, YYYY");
 				break;
-				
+
 			    case 7:
 				var sDate = moment(startTime).format("dddd, MMMM D, YYYY");
 				break;
@@ -349,8 +349,8 @@ $(document).ready(function() {
         getMonth();
     });
 
-	
-	
+
+
 // test stuff
 
 
@@ -365,7 +365,7 @@ $(document).ready(function() {
         if (this.checked) {
             $('#calendar, #calendar2').fullCalendar('addEventSource', {
                 url: "svu.edu_nf5v7viog32c563doboaljtf4o@group.calendar.google.com",
-                color: '#2da26c'
+                className: 'svu-academics-cal'
             });
         } else {
             $('#calendar, #calendar2').fullCalendar('removeEventSource', 'svu.edu_nf5v7viog32c563doboaljtf4o@group.calendar.google.com')
@@ -375,7 +375,7 @@ $(document).ready(function() {
         if (this.checked) {
             $('#calendar, #calendar2').fullCalendar('addEventSource', {
                 url: "svu.edu_tsbvq83kmqb2qe1qnocjd7v5f4@group.calendar.google.com",
-                color: 'rgba(255,209,0, 0.8)'
+                className: 'svu-clubs-cal'
             });
         } else {
             $('#calendar, #calendar2').fullCalendar('removeEventSource', 'svu.edu_tsbvq83kmqb2qe1qnocjd7v5f4@group.calendar.google.com')
@@ -385,7 +385,7 @@ $(document).ready(function() {
         if (this.checked) {
             $('#calendar, #calendar2').fullCalendar('addEventSource', {
                 url: "svu.edu_cpmvje154c4g2gkvk545i6pmqk@group.calendar.google.com",
-                color: '#029AE4'
+                className: 'svu-activities-cal'
             });
         } else {
             $('#calendar, #calendar2').fullCalendar('removeEventSource', 'svu.edu_cpmvje154c4g2gkvk545i6pmqk@group.calendar.google.com')
@@ -395,7 +395,7 @@ $(document).ready(function() {
         if (this.checked) {
             $('#calendar, #calendar2').fullCalendar('addEventSource', {
                 url: "svu.edu_9cv92psfm81gqmcdr8ok95odes@group.calendar.google.com",
-                color: '#7E57C2'
+                className: 'svu-arts-cal'
             });
         } else {
             $('#calendar, #calendar2').fullCalendar('removeEventSource', 'svu.edu_9cv92psfm81gqmcdr8ok95odes@group.calendar.google.com')
@@ -405,7 +405,7 @@ $(document).ready(function() {
         if (this.checked) {
             $('#calendar, #calendar2').fullCalendar('addEventSource', {
                 url: "svu.edu_fe3j597hjc9bf2t0fb7nni6sf8@group.calendar.google.com",
-                color: '#EF5350'
+                className: 'svu-athletics-cal'
             });
         } else {
             $('#calendar, #calendar2').fullCalendar('removeEventSource', 'svu.edu_fe3j597hjc9bf2t0fb7nni6sf8@group.calendar.google.com')
@@ -415,7 +415,7 @@ $(document).ready(function() {
         if (this.checked) {
             $('#calendar, #calendar2').fullCalendar('addEventSource', {
                 url: "svu.edu_lg0oft04slbt53v0knekmtn60o@group.calendar.google.com",
-                color: '#FFB74D'
+                className: 'svu-religious-cal'
             });
         } else {
             $('#calendar, #calendar2').fullCalendar('removeEventSource', 'svu.edu_lg0oft04slbt53v0knekmtn60o@group.calendar.google.com')
@@ -425,7 +425,7 @@ $(document).ready(function() {
             if (this.checked) {
                 $('#calendar, #calendar2').fullCalendar('addEventSource', {
                     url: "usa__en@holiday.calendar.google.com",
-                    color: '#607D8B'
+                    className: 'svu-holiday-cal'
                 });
             } else {
                 $('#calendar, #calendar2').fullCalendar('removeEventSource', 'usa__en@holiday.calendar.google.com')
