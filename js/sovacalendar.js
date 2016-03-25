@@ -94,7 +94,7 @@ $(document).ready(function() {
 
             var startTime = new Date(event.start);
             var endTime = new Date(event.end);
-<<<<<<< HEAD
+
 			var sTime = moment(startTime).format("h:mm a");
 			var eTime = moment(endTime).format("h:mm a");
 			
@@ -184,7 +184,7 @@ $(document).ready(function() {
 			}
 			$('#date').html(sDate);
 			}
-=======
+
             var sTime = moment(startTime).format("h:mm a");
             var eTime = moment(endTime).format("h:mm a");
             if (sTime == eTime) {
@@ -255,7 +255,7 @@ $(document).ready(function() {
             }
 
 
->>>>>>> origin/master
+
             //modal call per the materialize.css documentation
             $('#eventModal').openModal();
             //this prevents the eventclick redirect to google
@@ -348,14 +348,14 @@ $(document).ready(function() {
         $('.button-collapse').sideNav('hide');
         getMonth();
     });
-<<<<<<< HEAD
+
 	
 	
 // test stuff
 
 
-=======
->>>>>>> origin/master
+
+
 
 
 
