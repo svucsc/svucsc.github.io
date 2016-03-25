@@ -10,7 +10,7 @@ Table of Contents
 /* 1 - General Classes */
 
 .modal {
-	
+
 	max-height: 75%;
 	width: 35%;
 }
@@ -27,7 +27,7 @@ body {
 }
 h2 {
     color: #fff;
-    font-size: 28px;
+    font-size: 30px;
     padding-top: 37px;
     text-shadow: 0px 1px 5px #333;
 }
@@ -98,11 +98,17 @@ i.mdi-navigation-menu {
     font-size: 32px;
     color: #fff;
 }
+@media screen and (max-width: 700px){
+i.mdi-navigation-menu {
+	padding: 34px 0 0 20px;
+}
+}
 i.material-icons {
     text-shadow: 1px 0px 6px #333;
     color: #fff;
     height: 60px;
 }
+
 a.dropdown-button {
     height: 62px;
 }
@@ -166,7 +172,7 @@ a.subscribe {
 .Dec {
 	 background-image: url("http://svucsc.github.io/img/winter.jpg");
 }
-	
+
 	/* Adjust 140px header  */
 nav {
     background-size: auto 112%;
@@ -203,9 +209,24 @@ div#index-banner {
     top: 10px;
     right: 10px;
 }
-@media screen and (max-width: 517px) {
+@media screen and (max-width: 700px){
+.fc-left {
+    float: none!important;
+}
 .fc-toolbar {
-    margin: 0 15px 0 100px;
+	margin: 0;
+}
+.fc .fc-toolbar > * > *{
+		float: none;
+}
+h2 {
+    padding-top: 20px;
+}
+.fc-right {
+    padding-top: 16px!important;
+    display: inline-flex;
+    float: none!important;
+		padding-left: 0px!important;
 }
 }
 	/* Today Highlight Color */
@@ -225,12 +246,7 @@ div#index-banner {
     padding-top: 34px;
     padding-left: 23px;
 }
-@media screen and (max-width: 604px) {
-.fc-right {
-    float: left!important;
-    padding-top: 16px;
-}
-}
+
 	/* Align day numbers left */
 .fc-ltr .fc-basic-view .fc-day-number {
     text-align: left;
@@ -291,6 +307,19 @@ button.fc-today-button {
 }
 .fc .fc-button-group > * {
     margin: 0 0 0 9px;
+}
+.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .side-nav {
+	box-shadow: none;
+}
+.fc-state-disabled {
+	opacity: 1;
+}
+.fc-right button {
+	border: 1px #999 solid;
+}
+.fc button {
+	height: 2.4em;
+	padding: 0 1.5em;
 }
 	/* Set month weeks min height */
 .fc-basic-view .fc-body .fc-row {
