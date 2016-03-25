@@ -25,7 +25,7 @@ body {
 .fc-day-grid-event:hover{
 	opacity: 0.9;
 }
-h2 {
+#calendar h2 {
     color: #fff;
     font-size: 30px;
     padding-top: 37px;
@@ -220,7 +220,7 @@ div#index-banner {
 .fc .fc-toolbar > * > *{
 		float: none;
 }
-h2 {
+#calendar h2 {
     padding-top: 20px;
 }
 .fc-right {
@@ -355,8 +355,18 @@ min-height: 60px;
     display: none;
 }
 /* Styles for the day view on month view for mobile calendar */
-#calendar2 .fc-toolbar, #calendar2 .fc-head {
+#calendar2 .fc-right, #calendar2 .fc-head {
 	display: none!important;
 }
-
+#calendar2 h2 {
+    font-size: 20px;
+    text-align: left;
+    padding: 20px 0 5px 10px;
+}
+#calendar2 td.fc-widget-content {
+    border: 0;
+}
+#calendar2 {
+    background-color: #eee;
+}
 }
