@@ -263,72 +263,72 @@ $(document).ready(function() {
     //Calendar toggles
     $('#academics').click(function() {
         if (this.checked) {
-            $('#calendar').fullCalendar('addEventSource', {
+            $('#calendar, #calendar2').fullCalendar('addEventSource', {
                 url: "svu.edu_nf5v7viog32c563doboaljtf4o@group.calendar.google.com",
                 color: '#2da26c'
             });
         } else {
-            $('#calendar').fullCalendar('removeEventSource', 'svu.edu_nf5v7viog32c563doboaljtf4o@group.calendar.google.com')
+            $('#calendar, #calendar2').fullCalendar('removeEventSource', 'svu.edu_nf5v7viog32c563doboaljtf4o@group.calendar.google.com')
         }
     })
     $('#clubs').click(function() {
         if (this.checked) {
-            $('#calendar').fullCalendar('addEventSource', {
+            $('#calendar, #calendar2').fullCalendar('addEventSource', {
                 url: "svu.edu_tsbvq83kmqb2qe1qnocjd7v5f4@group.calendar.google.com",
                 color: 'rgba(255,209,0, 0.8)'
             });
         } else {
-            $('#calendar').fullCalendar('removeEventSource', 'svu.edu_tsbvq83kmqb2qe1qnocjd7v5f4@group.calendar.google.com')
+            $('#calendar, #calendar2').fullCalendar('removeEventSource', 'svu.edu_tsbvq83kmqb2qe1qnocjd7v5f4@group.calendar.google.com')
         }
     })
     $('#activities').click(function() {
         if (this.checked) {
-            $('#calendar').fullCalendar('addEventSource', {
+            $('#calendar, #calendar2').fullCalendar('addEventSource', {
                 url: "svu.edu_cpmvje154c4g2gkvk545i6pmqk@group.calendar.google.com",
                 color: '#029AE4'
             });
         } else {
-            $('#calendar').fullCalendar('removeEventSource', 'svu.edu_cpmvje154c4g2gkvk545i6pmqk@group.calendar.google.com')
+            $('#calendar, #calendar2').fullCalendar('removeEventSource', 'svu.edu_cpmvje154c4g2gkvk545i6pmqk@group.calendar.google.com')
         }
     })
     $('#arts').click(function() {
         if (this.checked) {
-            $('#calendar').fullCalendar('addEventSource', {
+            $('#calendar, #calendar2').fullCalendar('addEventSource', {
                 url: "svu.edu_9cv92psfm81gqmcdr8ok95odes@group.calendar.google.com",
                 color: '#7E57C2'
             });
         } else {
-            $('#calendar').fullCalendar('removeEventSource', 'svu.edu_9cv92psfm81gqmcdr8ok95odes@group.calendar.google.com')
+            $('#calendar, #calendar2').fullCalendar('removeEventSource', 'svu.edu_9cv92psfm81gqmcdr8ok95odes@group.calendar.google.com')
         }
     })
     $('#athletics').click(function() {
         if (this.checked) {
-            $('#calendar').fullCalendar('addEventSource', {
+            $('#calendar, #calendar2').fullCalendar('addEventSource', {
                 url: "svu.edu_fe3j597hjc9bf2t0fb7nni6sf8@group.calendar.google.com",
                 color: '#EF5350'
             });
         } else {
-            $('#calendar').fullCalendar('removeEventSource', 'svu.edu_fe3j597hjc9bf2t0fb7nni6sf8@group.calendar.google.com')
+            $('#calendar, #calendar2').fullCalendar('removeEventSource', 'svu.edu_fe3j597hjc9bf2t0fb7nni6sf8@group.calendar.google.com')
         }
     })
     $('#religious').click(function() {
         if (this.checked) {
-            $('#calendar').fullCalendar('addEventSource', {
+            $('#calendar, #calendar2').fullCalendar('addEventSource', {
                 url: "svu.edu_lg0oft04slbt53v0knekmtn60o@group.calendar.google.com",
                 color: '#FFB74D'
             });
         } else {
-            $('#calendar').fullCalendar('removeEventSource', 'svu.edu_lg0oft04slbt53v0knekmtn60o@group.calendar.google.com')
+            $('#calendar, #calendar2').fullCalendar('removeEventSource', 'svu.edu_lg0oft04slbt53v0knekmtn60o@group.calendar.google.com')
         }
     })
     $('#holiday').click(function() {
             if (this.checked) {
-                $('#calendar').fullCalendar('addEventSource', {
+                $('#calendar, #calendar2').fullCalendar('addEventSource', {
                     url: "usa__en@holiday.calendar.google.com",
                     color: '#607D8B'
                 });
             } else {
-                $('#calendar').fullCalendar('removeEventSource', 'usa__en@holiday.calendar.google.com')
+                $('#calendar, #calendar2').fullCalendar('removeEventSource', 'usa__en@holiday.calendar.google.com')
             }
         })
         //View buttons for sidenav
