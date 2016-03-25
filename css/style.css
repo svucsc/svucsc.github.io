@@ -212,6 +212,7 @@ div#index-banner {
 @media screen and (max-width: 700px){
 .fc-left {
     float: none!important;
+		margin-right: 30px;
 }
 .fc-toolbar {
 	margin: 0;
@@ -227,11 +228,12 @@ h2 {
     display: inline-flex;
     float: none!important;
 		padding-left: 0px!important;
+		margin-left: -30px;
 }
 }
 	/* Today Highlight Color */
-.fc-unthemed .fc-today {
-    background: rgba(238,238,238,.6);
+.fc-unthemed .fc-today, .fc-state-highlight {
+	background: rgba(238,238,238,.6);
 }
 	/* Basic Day Today Highlight Color */
 .fc-basicDay-view .fc-today {
@@ -352,4 +354,9 @@ min-height: 60px;
 .fc-month-view td.fc-more-cell {
     display: none;
 }
+/* Styles for the day view on month view for mobile calendar */
+#calendar2 .fc-toolbar, #calendar2 .fc-head {
+	display: none!important;
+}
+
 }
