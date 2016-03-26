@@ -1,6 +1,6 @@
 nav {
     display: none;
 }
-#loading {
+#loading, #eventModal {
     display: none;
 }

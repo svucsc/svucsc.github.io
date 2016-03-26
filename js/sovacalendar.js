@@ -267,16 +267,20 @@ $(document).ready(function() {
 
 		//This section deals with the day view on month view for mobile users
     //change the mobile second calendar to day view for use with month view
+    //we use visibility instead of display because display prevents the calendar from actually rendering
     $('#calendar2').fullCalendar('changeView', 'basicDay');
     function setMobileCal() {
         var view = $('#calendar').fullCalendar('getView');
         if (view.name == 'month' && window.innerWidth < 551) {
             $("#calendar2").css({
-                "display": "block"
+                "visibility": "visible",
+                "margin-top": "0px"
             });
+            $('#calendar2').fullCalendar('changeView', 'basicDay');
         } else {
             $("#calendar2").css({
-                "display": "none"
+                "visibility": "hidden",
+                "margin-top": "-1000px"
             });
         }
     }
@@ -352,11 +356,6 @@ $(document).ready(function() {
 
 
 // test stuff
-
-
-
-
-
 
 
 

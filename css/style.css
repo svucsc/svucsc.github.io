@@ -10,11 +10,15 @@ Table of Contents
 /* 1 - General Classes */
 
 .modal {
-
 	max-height: 75%;
 	width: 35%;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1000px) {
+    .modal {
+        width: 55%;
+    }
+}
+@media screen and (max-width: 700px) {
     .modal {
         width: 75%;
     }
